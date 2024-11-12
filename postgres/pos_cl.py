@@ -4,7 +4,7 @@ import json
 import psycopg2
 from psycopg2 import sql
 import ipfsApi
-from spark_sht import spark_select_query
+# from postgres.spark_sht import spark_select_query
 
 os.environ['PGPASSWORD'] = 'sunlab'
 
@@ -81,17 +81,18 @@ def update_cid_in_table(cid, table_name):
 
         # Execute the update query with the new cid and the specified table_name
         cursor.execute(update_query, (cid, table_name))
+        rowcount = cursor.rowcount
 
         # Commit the transaction to the database
         connection.commit()
 
-        if cursor.rowcount > 0:
+        if rowcount > 0:
             print(f"CID for table_name {table_name} updated successfully to {cid}.")
         else:
             print(f"No entry found for table_name {table_name} to update.")
 
     except Exception as error:
-        print(f"Error updating CID for table_name {table_name}")
+        print(f"Error updating CID for table_name {table_name} {error}")
     
     finally:
         # Close the cursor and connection
@@ -111,7 +112,7 @@ def fetch_cid_from_table(table_name):
         )
 
         cursor = connection.cursor()
-
+        print("connected, running select query")
         # Prepare the SQL query to fetch the CID for a given table name
         select_query = sql.SQL("""
             SELECT cid FROM cid_table WHERE table_name = %s
@@ -122,6 +123,7 @@ def fetch_cid_from_table(table_name):
         result = cursor.fetchone()
 
         if result:
+            print(result[0])
             return result[0]
         else:
             print(f"No CID found for table: {table_name}")
@@ -151,7 +153,8 @@ def recreate_table_from_sql_dump(table_name, cid):
             check=True
         )
         print(f"Table {table_name} recreated successfully from SQL dump.")
-        # os.remove(dump_file_path)
+        if os.path.exists(dump_file_path):
+            os.remove(dump_file_path)
         
     except Exception as error:
         print(f"Error recreating table {table_name} from SQL dump {error}")
@@ -163,9 +166,10 @@ def create_query(conn,cur,query):
     # Step 1: Handle CREATE query
     try:
         table_name = query.split()[2]  # Assume table name is the 3rd word in the CREATE query
+        print(table_name)
         op = fetch_cid_from_table(table_name)
         if op != None:
-            raise Exception(f"Table {table_name} already exists!")
+            return False, "Table already exists!"
         cur.execute(query)
         conn.commit()
 
@@ -188,9 +192,11 @@ def create_query(conn,cur,query):
         add_cid_to_table(cid, table_name)
         if os.path.exists(file_path):
             os.remove(file_path)
-
+        return True, "Table created successfully!"
+    
     except Exception as e:
         print(f"Error Handling create, {e}")
+        return False, e
     
     finally:
         if cur:
@@ -202,29 +208,44 @@ def select_query(conn,cur,query):
     try:
         # Step 2: Handle SELECT query
         table_name = query.split()[3]  # Assume table name is the 4th word in the SELECT query
-        table_name = table_name[:-1]
+        print(table_name[-1])
+        if table_name[-1] == ';':
+            print("in here")
+            table_name = table_name[:-1]
+        
+        print(f"Select for table {table_name}")
         cid = fetch_cid_from_table(table_name)
+        print(f"{cid} fetched for table")
 
         if cid:
             # Step 3: Recreate the table using the SQL dump
             recreate_table_from_sql_dump(table_name, cid)
+            print("table recreated in postgres")
+            # Execute the SELECT query
+            cur.execute(query)
+            result = cur.fetchall()
+            # op,msg = spark_select_query(query)
 
-            # # Execute the SELECT query
-            # cur.execute(query)
-            # result = cur.fetchall()
-            spark_select_query(query)
+            # Assuming the column names are available in `cur.description`
+            columns = [desc[0] for desc in cur.description]
 
-            # print(f"Query result: {result}")
-            # for row in result:
-            #     print(row)
+            # Convert the result to a list of dictionaries
+            result_list = [dict(zip(columns, row)) for row in result]
+
+            # Convert the list of dictionaries to JSON
+            result_json = json.dumps(result_list)
             # Clean up the tables
 
             cur.execute(f"DROP TABLE IF EXISTS {table_name};")
             conn.commit()
             print(f"Table {table_name} cleaned up after SELECT query.")
+            return True, result_json
+        print("no cid")
+        return False, "Table does not exists!"
 
     except Exception as e:
         print(f"Error handling select query {e}")
+        return False, e
 
     finally:
         if cur:
@@ -239,19 +260,22 @@ def drop_table(conn, cur, query):
         table_name = query.split()[2]  # Assume the table name is the 3rd word in the CREATE query
         if table_name[-1] == ';':
             table_name = query.split()[2][:-1]
+        op = fetch_cid_from_table(table_name)
+        if op == None:
+            return False, "Table does not exists!"
         print(f"Attempting to drop entry for table: {table_name}")
 
         # Step 2: Correct the DELETE query
         delete_query = "DELETE FROM cid_table WHERE table_name = %s"
         cur.execute(delete_query, (table_name,))
         conn.commit()
-        if cur.rowcount == 0:
-            raise Exception(f"Table {table_name} does not exists.")
 
         print(f"Entry for table {table_name} removed from cid_table.")
+        return True, f"Table deleted successfully"
 
     except Exception as e:
         print(f"Error handling the drop operation: {e}")
+        return False, e
 
     finally:
         if cur:
@@ -265,7 +289,9 @@ def non_select_query(conn,cur,query):
 
     try:
         # Step 2: Handle non-SELECT query (INSERT, UPDATE, DELETE, etc.)
-        table_name = query.split()[2]  # Assume table name is the 3rd word in the non-SELECT query
+        table_name = query.split()[2]
+        if table_name[-1] == ';':
+            table_name = query.split()[2][:-1]  # Assume table name is the 3rd word in the non-SELECT query
         cid = fetch_cid_from_table(table_name)
         print(f"cid fetched from table {cid}")
 
@@ -276,6 +302,7 @@ def non_select_query(conn,cur,query):
             cur.execute(query)
             
             print(f"Query result: {cur.rowcount}")
+            rowcount = cur.rowcount
             conn.commit()
 
             print(f"Query executed successfully: {query}")
@@ -296,9 +323,13 @@ def non_select_query(conn,cur,query):
             print(f"Table {table_name} cleaned up after query execution.")
             if os.path.exists(file_path):
                 os.remove(file_path)
+            
+            return True, f"Query Successful, {rowcount} row/rows affected"
 
+        return False, "Table does not exists"
     except Exception as e:
         print(f"Error handling query{e}")
+        return False, e
 
     finally:
         if cur:
@@ -320,20 +351,24 @@ def handle_query(query):
 
         # Analyze the query type
         if query.strip().lower().startswith("create"):
-            create_query(conn,cur,query)
+            print("here for create")
+            output,message = create_query(conn,cur,query)
 
         elif query.strip().lower().startswith("select"):
-            select_query(conn,cur,query)
+            output,message = select_query(conn,cur,query)
             
         
         elif query.strip().lower().startswith("drop"):
-            drop_table(conn,cur,query)
+            output, message = drop_table(conn,cur,query)
 
         else:
-            non_select_query(conn,cur,query)
+            output, message = non_select_query(conn,cur,query)
+        
+        return output, message
 
     except Exception as e:
         print(f"Error handling query {e}")
+        return False, e
     finally:
         if cur:
             cur.close()
@@ -343,21 +378,21 @@ def handle_query(query):
 
 # Example usage
 
-def main():
-    query = "CREATE TABLE lab (id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL);"
+# def main():
+#     query = "CREATE TABLE lab (id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL);"
 
 
-    query = "INSERT INTO lab (name) VALUES ('John REddy');"
-
-    
-    query = "SELECT * FROM lab;"
+#     query = "INSERT INTO sunlab (name) VALUES ('John REddy');"
 
     
-    query = input("Enter query: ")
-    while (query != "quit"):
-        handle_query(query)
-        query = input("Enter query: ")
+#     query = "SELECT * FROM lab;"
 
-main()        
+    
+#     query = input("Enter query: ")
+#     while (query != "quit"):
+#         handle_query(query)
+#         query = input("Enter query: ")
+
+# main()        
 
 
