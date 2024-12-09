@@ -8,6 +8,14 @@ import ipfsApi
 
 os.environ['PGPASSWORD'] = 'sunlab'
 
+def get_db_connection():
+    return psycopg2.connect(
+            dbname="postgres",
+            user="postgres",
+            password="sunlab",
+            host="localhost",
+            port="5432"
+        )
 
 def add_to_ipfs(file_path):
     # Initialize the IPFS client
@@ -27,13 +35,7 @@ def add_to_ipfs(file_path):
 
 def add_cid_to_table(cid, table_name):
     try:
-        connection = psycopg2.connect(
-            dbname="postgres",
-            user="postgres",
-            password="sunlab",
-            host="localhost",
-            port="5432"
-        )
+        connection = get_db_connection()
 
         cursor = connection.cursor()
 
@@ -62,13 +64,7 @@ def add_cid_to_table(cid, table_name):
 def update_cid_in_table(cid, table_name):
     try:
         # Connect to the PostgreSQL database
-        connection = psycopg2.connect(
-            dbname="postgres",
-            user="postgres",
-            password="sunlab",
-            host="localhost",
-            port="5432"
-        )
+        connection = get_db_connection()
 
         cursor = connection.cursor()
 
@@ -102,20 +98,27 @@ def update_cid_in_table(cid, table_name):
             connection.close()
 
 def fetch_cid_from_table(table_name):
-    try:
-        connection = psycopg2.connect(
-            dbname="postgres",
-            user="postgres",
-            password="sunlab",
-            host="localhost",
-            port="5432"
-        )
+    """
+    Fetches the CID for the latest entry of a given table name from the cid_table.
 
+    Parameters:
+        table_name (str): The name of the table to fetch the CID for.
+
+    Returns:
+        str or None: The CID if found, otherwise None.
+    """
+    try:
+        connection = get_db_connection()
         cursor = connection.cursor()
-        print("connected, running select query")
-        # Prepare the SQL query to fetch the CID for a given table name
+        print("Connected, running select query")
+
+        # Prepare the SQL query to fetch the CID for the latest entry
         select_query = sql.SQL("""
-            SELECT cid FROM cid_table WHERE table_name = %s
+            SELECT cid
+            FROM cid_table
+            WHERE table_name = %s
+            ORDER BY date_time DESC
+            LIMIT 1;
         """)
 
         # Execute the query to fetch the CID
@@ -123,19 +126,20 @@ def fetch_cid_from_table(table_name):
         result = cursor.fetchone()
 
         if result:
-            print(result[0])
+            print(f"CID found: {result[0]}")
             return result[0]
         else:
             print(f"No CID found for table: {table_name}")
             return None
     except Exception as error:
-        print(f"Error fetching CID")
+        print(f"Error fetching CID: {error}")
         return None
     finally:
-        if cursor:
+        if 'cursor' in locals() and cursor:
             cursor.close()
-        if connection:
+        if 'connection' in locals() and connection:
             connection.close()
+
 
 
 def recreate_table_from_sql_dump(table_name, cid):
@@ -376,23 +380,6 @@ def handle_query(query):
             conn.close()
 
 
-# Example usage
-
-# def main():
-#     query = "CREATE TABLE lab (id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL);"
-
-
-#     query = "INSERT INTO sunlab (name) VALUES ('John REddy');"
-
-    
-#     query = "SELECT * FROM lab;"
-
-    
-#     query = input("Enter query: ")
-#     while (query != "quit"):
-#         handle_query(query)
-#         query = input("Enter query: ")
-
-# main()        
-
+#######################################################################################################################################
+# Patient data
 
