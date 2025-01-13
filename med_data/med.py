@@ -274,10 +274,6 @@ def check_table_exists(med_type, data, username):
 
     finally:
         # Ensure resources are cleaned up
-        if 'cursor' in locals() and cursor:
-            cursor.close()
-        if 'conn' in locals() and conn:
-            conn.close()
         if dump_name and os.path.exists(dump_name):
             os.remove(dump_name)
         if dump_file_path and os.path.exists(dump_file_path):
@@ -364,10 +360,3 @@ def fetch_data_api(med_type):
     except Exception as e:
         print(f"Error: {str(e)}")
         return False
-
-    finally:
-        # Ensure resources are cleaned up
-        if 'cursor' in locals() and cursor:
-            cursor.close()
-        if 'conn' in locals() and conn:
-            conn.close()

@@ -10,11 +10,11 @@ os.environ['PGPASSWORD'] = 'sunlab'
 spark = SparkSession.builder \
     .appName("PostgreSQL Connection with PySpark") \
     .config("spark.jars", "/home/sunlab/Downloads/postgresql-42.7.4.jar") \
-    .master("spark://172.20.103.30:7077") \
+    .master("spark://172.20.24.155:7077") \
     .getOrCreate()
 
 
-url = "jdbc:postgresql://172.20.103.30:5432/postgres"
+url = "jdbc:postgresql://172.20.24.155:5432/postgres"
 
 properties = {
     "user": "postgres",

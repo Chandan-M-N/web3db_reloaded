@@ -2,7 +2,10 @@ import subprocess
 from flask import Flask, request, jsonify
 from postgres import pos_cl
 from med_data import med
+from flask_cors import CORS
+import json
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/query', methods=['POST'])
 def process_string():
@@ -37,16 +40,19 @@ def medical_data():
     try:
         # Parse the incoming JSON data
         data = request.json
-        
+        if 'publish_received_at' in data:
+            payload = data['payload']
+            data = json.loads(payload)
         # Extract the type of medical data
         if 'type' not in data:
             return jsonify({"error": "Please add type key to specify type of data"})
         medical_type = data.pop('type', None) 
-        
+        print(medical_type)
         op = med.check_table_exists(medical_type.lower(),data,"sunlab")
         return jsonify({"val": op})
     
     except Exception as e:
+        print(e)
         return jsonify({"error": str(e)}), 500
 
 @app.route('/fetch-medical', methods=['POST'])
@@ -68,4 +74,5 @@ def fetch_medical_data():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000,debug=True)
+    app.run(host="0.0.0.0", port=5100,debug=True)
+

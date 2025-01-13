@@ -119,7 +119,7 @@ sudo nano /path/to/data_directory/postgresql.conf
 
 listen_addresses = '*'
 
-Alternatively, you can specify only certain IPs, e.g., listen_addresses = 'localhost,172.20.103.30'.
+Alternatively, you can specify only certain IPs, e.g., listen_addresses = 'localhost,172.20.24.155'.
 
 ------------------------------------------------------------
 After changing the config -- restart
