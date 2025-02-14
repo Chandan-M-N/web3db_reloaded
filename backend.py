@@ -47,5 +47,31 @@ def medical_data():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 
+@app.route('/device-list', methods=['POST'])
+def devices():
+    data = request.get_json()  # Get JSON data from the request
+    eth_address = data.get("ethereum_address")  # Extract Ethereum address
+    device_ids = data.get("device_ids")  # Extract list of device IDs
+
+    print(f"Ethereum Address: {eth_address}")
+    print(f"Device IDs: {device_ids}")
+
+    return jsonify({"message": "Data received successfully"}), 200
+
+
+@app.route('/subscribe-devices', methods=['POST'])
+def subscribe_devices():
+    data = request.get_json()  # Get JSON data from the request
+    subscriber_eth_address = data.get("subscriber_ethereum_address")  # Extract subscriber's Ethereum address
+    subscribe_device_ids = data.get("subscribe_device_ids")  # Extract list of devices to be subscribed
+
+    print(f"Subscriber Ethereum Address: {subscriber_eth_address}")
+    print(f"Devices to Subscribe: {subscribe_device_ids}")
+
+    return jsonify({"message": "Subscription data received successfully"}), 200
+
+
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
