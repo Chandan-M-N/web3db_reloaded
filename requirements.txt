@@ -1,0 +1,20 @@
+flask
+pika
+celery
+
+'''
+mosquitto_pub -h 172.20.24.155 -t "topic/bp" -m 'payload:
+
+{
+
+  "time": "2024-01-31T12:00:00Z",
+  "data": {
+    "heart_rate": 60,
+    "blood_pressure": {
+      "sys": 120,
+      "dia": 80
+    }
+  }
+}'
+
+'''
