@@ -32,7 +32,8 @@ def medical_data():
         # Prepare the message to send to RabbitMQ
         message = {
             "topic": topic,
-            "payload": payload
+            "payload": payload,
+            "request": 'post'
         }
 
         print('Sending message to RabbitMQ...')
@@ -45,6 +46,53 @@ def medical_data():
     except Exception as e:
         print(f"Error in medical_data: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route('/get-medical', methods=['GET'])
+def get_medical_data():
+    try:
+        # Get the JSON data from the request
+        data = request.json  # This is unconventional for GET, but will work if body is sent
+        
+        # Extract time or points from the body
+        if not data:
+            return jsonify({"status": "error", "message": "No data provided in the request body"}), 400
+        
+        if 'time' in data:
+            time = data['time']
+            message = {
+                "time": time,
+                "request": "get"
+            }
+            print(f"Time extracted: {time}")
+        
+        elif 'points' in data:
+            points = data['points']
+            message = {
+                "points": points,
+                "request": "get"
+            }
+            print(f"Points extracted: {points}")
+        
+        else:
+            return jsonify({"status": "error", "message": "Request must contain 'time' or 'points'"}), 400
+
+        # Print the message to be sent to RabbitMQ
+        print("Prepared message for RabbitMQ:")
+        print(json.dumps(message, indent=2))
+
+        # Send the message to RabbitMQ
+        print('Sending message to RabbitMQ...')
+        send_to_rabbitmq(message)
+        print('Message sent successfully!')
+
+        # Return a success response
+        return jsonify({"status": "success", "message": "Data received and sent to RabbitMQ"}), 200
+
+    except Exception as e:
+        print(f"Error in get_medical_data: {e}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 
 
 @app.route('/device-list', methods=['POST'])
@@ -69,8 +117,6 @@ def subscribe_devices():
     print(f"Devices to Subscribe: {subscribe_device_ids}")
 
     return jsonify({"message": "Subscription data received successfully"}), 200
-
-
 
 
 if __name__ == '__main__':

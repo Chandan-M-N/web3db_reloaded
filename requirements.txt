@@ -1,7 +1,5 @@
 flask
 pika
-celery
-
 '''
 mosquitto_pub -h 172.20.24.155 -t "topic/bp" -m 'payload:
 
