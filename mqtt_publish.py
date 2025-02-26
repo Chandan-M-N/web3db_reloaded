@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import time
 
 # MQTT Broker details
-broker = "172.20.24.155"
+broker = "0.0.0.0"
 port = 1883  # Default MQTT port
 topic = "topic/shsjdkkkddh/djdhdjjd"
 

@@ -6,7 +6,7 @@ from pika.credentials import PlainCredentials
 from queue import Queue
 
 # File paths
-HOSTS_FILE = "rabbitmq_config/hosts.txt"
+HOSTS_FILE = "hosts.txt"
 USER_FILE = "rabbitmq_config/user.json"
 
 # Read RabbitMQ hosts from hosts.txt
@@ -45,8 +45,8 @@ def get_connection_pool():
     global _connection_pool
     if _connection_pool is None:
         # Initialize the connection pool
-        _connection_pool = Queue(maxsize=10)  # Adjust maxsize as needed
-        for _ in range(10):  # Pre-fill the pool with connections
+        _connection_pool = Queue(maxsize=2)  # Adjust maxsize as needed
+        for _ in range(2):  # Pre-fill the pool with connections
             connection = create_connection()
             if connection:
                 _connection_pool.put(connection)
@@ -54,21 +54,35 @@ def get_connection_pool():
 
 def create_connection():
     """
-    Creates a new RabbitMQ connection.
+    Creates a new RabbitMQ connection by trying each node in the cluster sequentially.
+
+    Args:
+        rabbitmq_nodes (list): List of RabbitMQ node hosts.
+        username (str): RabbitMQ username.
+        password (str): RabbitMQ password.
+
+    Returns:
+        pika.BlockingConnection: A RabbitMQ connection if successful, otherwise None.
     """
-    try:
-        connection = pika.BlockingConnection(
-            pika.ConnectionParameters(
-                host=rabbitmq_nodes[0],  # Use the first node
-                credentials=pika.PlainCredentials(username, password),
-                heartbeat=600,  # Increase heartbeat to avoid timeouts
-                blocked_connection_timeout=300,  # Timeout for blocked connections
+    for host in rabbitmq_nodes:
+        try:
+            connection = pika.BlockingConnection(
+                pika.ConnectionParameters(
+                    host=host,  # Use the current host
+                    credentials=pika.PlainCredentials(username, password),
+                    heartbeat=600,  # Increase heartbeat to avoid timeouts
+                    blocked_connection_timeout=300,  # Timeout for blocked connections
+                )
             )
-        )
-        return connection
-    except Exception as e:
-        print(f"Failed to create RabbitMQ connection: {e}")
-        return None
+            print(f"Successfully connected to RabbitMQ node: {host}")
+            return connection
+        except Exception as e:
+            print(f"Failed to connect to RabbitMQ node {host}: {e}")
+            continue  # Try the next node
+
+    # If no connection was successful
+    print("Failed to connect to all RabbitMQ nodes.")
+    return None
 
 def get_connection():
     """

@@ -4,6 +4,7 @@ import os
 import random
 import string
 from ipfs_content import ipfs_operations as ipfs
+from database import db_operations as db
 
 def generate_random_filename():
     """Generates a random 46-character filename for the JSON file."""
@@ -11,12 +12,22 @@ def generate_random_filename():
 
 def save_payload_to_file(payload):
     """Saves the payload to a JSON file in the dumps folder."""
-    os.makedirs("dumps", exist_ok=True)
-    filename = os.path.join("dumps", generate_random_filename())
-    with open(filename, "w") as file:
-        json.dump(payload, file, indent=4)
-    print(f" [x] Payload saved to {filename}")
-    return filename
+    try: 
+        os.makedirs("dumps", exist_ok=True)
+        filename = os.path.join("dumps", generate_random_filename())
+        with open(filename, "w") as file:
+            json.dump(payload, file, indent=4)
+        print(f" [x] Payload saved to {filename}")
+        return filename
+    except Exception as e:
+        print(f"Failed {e}")
+        return False
+
+def silentremove(filename):
+    try:
+        os.remove(filename)
+    except OSError as e:
+        print(f"Failed to delete file {filename} {e}")
 
 def process_message(ch, method, properties, body):
     print("Received message:", body)
@@ -30,15 +41,23 @@ def process_message(ch, method, properties, body):
         print(f" [x] Payload: {payload}")
 
         filename = save_payload_to_file(payload)
+        if filename == False:
+            print("Failed to add payload to json file")
+            return
+        
         ipfs_output = ipfs.add_file_with_metadata(filename)
         
-        print(f"IPFS output: {ipfs_output}")  # Debug print to check the output
-        
+        silentremove(filename)
+
         if ipfs_output[0] != True:
             print("IPFS output not True, skipping ACK")  # Debug statement to understand why we're skipping ACK
             return  # Do not acknowledge; message will be requeued for retry
+        cid = ipfs_output[1]
+        db_output = db.add_hash(cid,topic)
+        if db_output == False:
+            print(f"Adding CID to database failed, {topic},{payload},{cid}")
+            return
         
-        print('ack')
         ch.basic_ack(delivery_tag=method.delivery_tag)
     
     elif message.get('request') == 'get':
