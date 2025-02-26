@@ -32,37 +32,34 @@ def silentremove(filename):
 def process_message(ch, method, properties, body):
     print("Received message:", body)
     message = json.loads(body)
-    if message.get('request') == 'post':
     
-        topic = message.get("topic", "Unknown")
-        payload = message.get("payload", {})
+    topic = message.get("topic", "Unknown")
+    payload = message.get("payload", {})
 
-        print(f" [x] Topic: {topic}")
-        print(f" [x] Payload: {payload}")
+    print(f" [x] Topic: {topic}")
+    print(f" [x] Payload: {payload}")
 
-        filename = save_payload_to_file(payload)
-        if filename == False:
-            print("Failed to add payload to json file")
-            return
-        
-        ipfs_output = ipfs.add_file_with_metadata(filename)
-        
-        silentremove(filename)
-
-        if ipfs_output[0] != True:
-            print("IPFS output not True, skipping ACK")  # Debug statement to understand why we're skipping ACK
-            return  # Do not acknowledge; message will be requeued for retry
-        cid = ipfs_output[1]
-        db_output = db.add_hash(cid,topic)
-        if db_output == False:
-            print(f"Adding CID to database failed, {topic},{payload},{cid}")
-            return
-        
-        ch.basic_ack(delivery_tag=method.delivery_tag)
+    filename = save_payload_to_file(payload)
+    if filename == False:
+        print("Failed to add payload to json file")
+        return
     
-    elif message.get('request') == 'get':
-        print(body)
-        pass
+    ipfs_output = ipfs.add_file_with_metadata(filename)
+    
+    silentremove(filename)
+
+    if ipfs_output[0] != True:
+        print("IPFS output not True, skipping ACK")  # Debug statement to understand why we're skipping ACK
+        return  # Do not acknowledge; message will be requeued for retry
+    cid = ipfs_output[1]
+    db_output = db.add_hash(cid,topic)
+    if db_output == False:
+        print(f"Adding CID to database failed, {topic},{payload},{cid}")
+        return
+    
+    ch.basic_ack(delivery_tag=method.delivery_tag)
+    return
+    
 
 
 def start_consumer():

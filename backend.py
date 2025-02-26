@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 import json
 from message_queue.rabbit_queue import send_to_rabbitmq
+from database import db_operations as db
+from ipfs_content import ipfs_operations as ipfs
+import os
 
 app = Flask(__name__)
 
@@ -32,10 +35,8 @@ def medical_data():
         # Prepare the message to send to RabbitMQ
         message = {
             "topic": topic,
-            "payload": payload,
-            "request": 'post'
+            "payload": payload
         }
-
         print('Sending message to RabbitMQ...')
         send_to_rabbitmq(message)
         print('Message sent successfully!')
@@ -60,34 +61,41 @@ def get_medical_data():
         
         if 'time' in data:
             time = data['time']
-            message = {
-                "time": time,
-                "request": "get"
-            }
             print(f"Time extracted: {time}")
-        
-        elif 'points' in data:
-            points = data['points']
-            message = {
-                "points": points,
-                "request": "get"
-            }
-            print(f"Points extracted: {points}")
-        
         else:
-            return jsonify({"status": "error", "message": "Request must contain 'time' or 'points'"}), 400
+            return jsonify({"status": "error", "message": "Request must contain 'time'"}), 400
 
-        # Print the message to be sent to RabbitMQ
-        print("Prepared message for RabbitMQ:")
-        print(json.dumps(message, indent=2))
+        # Fetch CIDs for the given time period
+        hash_list,message = db.fetch_cids_by_time(time)
 
-        # Send the message to RabbitMQ
-        print('Sending message to RabbitMQ...')
-        send_to_rabbitmq(message)
-        print('Message sent successfully!')
-
-        # Return a success response
-        return jsonify({"status": "success", "message": "Data received and sent to RabbitMQ"}), 200
+        if hash_list:
+            # Fetch files from IPFS and store them in dumps/{cid}.json
+            for cid in hash_list:
+                ipfs.fetch_file_from_ipfs_cluster(cid)
+            
+            # Read all JSON files from the dumps directory and merge their contents
+            merged_data = []
+            for cid in hash_list:
+                file_path = f"dumps/{cid}.json"
+                if os.path.exists(file_path):
+                    try:
+                        # Read the file and add its contents to the list
+                        with open(file_path, 'r') as file:
+                            file_data = json.load(file)
+                            merged_data.append(file_data)
+                        
+                        # Remove the file after processing
+                        os.remove(file_path)
+                        print(f"Removed file: {file_path}")
+                    except Exception as e:
+                        print(f"Error processing or removing file {file_path}: {e}")
+                        continue
+            
+            # Return the merged data as a JSON response
+            return jsonify({"status": "success", "data": merged_data}), 200
+        else:
+            # Return a response if no CIDs are found
+            return jsonify({"status": "success", "message": f"{message}"}), 200
 
     except Exception as e:
         print(f"Error in get_medical_data: {e}")

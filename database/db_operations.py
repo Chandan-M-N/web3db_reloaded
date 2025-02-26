@@ -91,3 +91,70 @@ def execute_query(query, params=None, retries=3, delay=1):
             print(f"Error executing query: {e}")
             return False
         
+def fetch_cids_by_time(time_str):
+    """
+    Fetch all CIDs from the ipfs_hashes table within the last specified time period.
+    
+    Args:
+        time_str (str): A string representing the time period (e.g., "15 mins", "2 days").
+    
+    Returns:
+        list: A list of CIDs (strings), or an empty list if no rows are found.
+    """
+    # Parse the time string into a PostgreSQL interval
+    time_parts = time_str.split()
+    if len(time_parts) != 2:
+        print("Invalid time format. Expected format: 'X sec(s)/min(s)/hour(s)/day(s)'")
+        return [],"Invalid time format. Expected format: 'X sec(s)/min(s)/hour(s)/day(s)'"
+    
+    value, unit = time_parts
+    try:
+        value = int(value)
+    except ValueError:
+        print("Invalid time value. Expected an integer.")
+        return [],"Invalid time value. Expected an integer."
+    
+    # Map the unit to a PostgreSQL interval keyword
+    unit = unit.lower()
+    if unit in ["sec", "secs", "second", "seconds"]:
+        interval = f"{value} seconds"
+    elif unit in ["min", "mins", "minute", "minutes"]:
+        interval = f"{value} minutes"
+    elif unit in ["hour", "hours"]:
+        interval = f"{value} hours"
+    elif unit in ["day", "days"]:
+        interval = f"{value} days"
+    else:
+        print("Invalid time unit. Expected 'sec(s)', 'min(s)', 'hour(s)', or 'day(s)'.")
+        return [],"Invalid time unit. Expected 'sec(s)', 'min(s)', 'hour(s)', or 'day(s)'."
+    
+    # Define the SQL query to fetch only CIDs
+    query = """
+    SELECT cid FROM ipfs_hashes
+    WHERE date_time >= NOW() - INTERVAL %s
+    ORDER BY date_time DESC;
+    """
+    
+    # Execute the query
+    try:
+        # Get a connection from the pool
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        
+        # Execute the query with the interval parameter
+        cursor.execute(query, (interval,))
+        
+        # Fetch all results and extract CIDs
+        results = [row[0] for row in cursor.fetchall()]
+        
+        # Release the connection back to the pool
+        cursor.close()
+        connection_pool.putconn(connection)
+        if results:
+            return results, 'Success'
+        else:
+            return results, 'No data available'
+    except Exception as e:
+        print(f"Error fetching CIDs: {e}")
+        return [], e
+    

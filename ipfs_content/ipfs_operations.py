@@ -48,7 +48,7 @@ def fetch_file_from_ipfs_cluster(cid):
     try:
         # Construct the API URL for fetching the file
         url = f"http://localhost:8080/ipfs/{cid}"
-        output_path = f"dumps/{cid}.sql"
+        output_path = f"dumps/{cid}.json"
         
         # Send a GET request to the IPFS Cluster API
         response = requests.get(url, stream=True)
