@@ -59,14 +59,14 @@ def get_medical_data():
         if not data:
             return jsonify({"status": "error", "message": "No data provided in the request body"}), 400
         
-        if 'time' in data:
+        if 'time' in data and 'topic' in data:
             time = data['time']
-            print(f"Time extracted: {time}")
+            topic = data['topic']
         else:
-            return jsonify({"status": "error", "message": "Request must contain 'time'"}), 400
+            return jsonify({"status": "error", "message": "Request must contain 'time' and 'topic'"}), 400
 
         # Fetch CIDs for the given time period
-        hash_list,message = db.fetch_cids_by_time(time)
+        hash_list,message = db.fetch_cids_by_time(time,topic)
 
         if hash_list:
             # Fetch files from IPFS and store them in dumps/{cid}.json
@@ -86,13 +86,12 @@ def get_medical_data():
                         
                         # Remove the file after processing
                         os.remove(file_path)
-                        print(f"Removed file: {file_path}")
                     except Exception as e:
                         print(f"Error processing or removing file {file_path}: {e}")
                         continue
             
             # Return the merged data as a JSON response
-            return jsonify({"status": "success", "data": merged_data}), 200
+            return jsonify({"data": merged_data}), 200
         else:
             # Return a response if no CIDs are found
             return jsonify({"status": "success", "message": f"{message}"}), 200

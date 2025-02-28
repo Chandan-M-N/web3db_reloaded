@@ -91,7 +91,7 @@ def execute_query(query, params=None, retries=3, delay=1):
             print(f"Error executing query: {e}")
             return False
         
-def fetch_cids_by_time(time_str):
+def fetch_cids_by_time(time_str,topic):
     """
     Fetch all CIDs from the ipfs_hashes table within the last specified time period.
     
@@ -131,7 +131,7 @@ def fetch_cids_by_time(time_str):
     # Define the SQL query to fetch only CIDs
     query = """
     SELECT cid FROM ipfs_hashes
-    WHERE date_time >= NOW() - INTERVAL %s
+    WHERE topic = %s AND date_time >= NOW() - INTERVAL %s
     ORDER BY date_time DESC;
     """
     
@@ -142,7 +142,7 @@ def fetch_cids_by_time(time_str):
         cursor = connection.cursor()
         
         # Execute the query with the interval parameter
-        cursor.execute(query, (interval,))
+        cursor.execute(query, (topic, interval))
         
         # Fetch all results and extract CIDs
         results = [row[0] for row in cursor.fetchall()]

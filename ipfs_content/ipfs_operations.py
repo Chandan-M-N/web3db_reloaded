@@ -60,7 +60,6 @@ def fetch_file_from_ipfs_cluster(cid):
                 for chunk in response.iter_content(chunk_size=8192):
                     if chunk:  # Filter out keep-alive chunks
                         file.write(chunk)
-            print(f"File successfully fetched and saved to {output_path}")
             return True
         else:
             print(f"Failed to fetch file: {response.status_code} - {response.text}")
