@@ -4,8 +4,10 @@ from message_queue.rabbit_queue import send_to_rabbitmq
 from database import db_operations as db
 from ipfs_content import ipfs_operations as ipfs
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/add-medical', methods=['POST'])
 def medical_data():
@@ -127,4 +129,4 @@ def subscribe_devices():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5100, debug=True)

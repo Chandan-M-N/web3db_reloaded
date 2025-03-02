@@ -42,6 +42,7 @@ def process_message(ch, method, properties, body):
     filename = save_payload_to_file(payload)
     if filename == False:
         print("Failed to add payload to json file")
+        ch.basic_ack(delivery_tag=method.delivery_tag)
         return
     
     ipfs_output = ipfs.add_file_with_metadata(filename)
@@ -49,12 +50,14 @@ def process_message(ch, method, properties, body):
     silentremove(filename)
 
     if ipfs_output[0] != True:
-        print("IPFS output not True, skipping ACK")  # Debug statement to understand why we're skipping ACK
+        print("IPFS output not True, skipping ACK")
+        ch.basic_ack(delivery_tag=method.delivery_tag)  # Debug statement to understand why we're skipping ACK
         return  # Do not acknowledge; message will be requeued for retry
     cid = ipfs_output[1]
     db_output = db.add_hash(cid,topic)
     if db_output == False:
         print(f"Adding CID to database failed, {topic},{payload},{cid}")
+        ch.basic_ack(delivery_tag=method.delivery_tag)
         return
     
     ch.basic_ack(delivery_tag=method.delivery_tag)
