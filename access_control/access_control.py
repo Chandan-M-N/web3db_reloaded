@@ -178,28 +178,26 @@ class AccessControl:
     
 
 
-if __name__ == "__main__":
-    # Example usage
-    try:
-        # Initialize the AccessControl class
-        access_control = AccessControl()
+# if __name__ == "__main__":
+#     try:
+#         access_control = AccessControl()
         
-        # Example: Add a policy
-        resource_id = "document123"
-        user_id = "alice"
-        print(f"Adding policy for {user_id} to access {resource_id}")
-        access_control.add_policy(resource_id, user_id)
+#         # Add a policy
+#         resource_id = "document123"
+#         user_id = "alice"
+#         print(f"Adding policy for {user_id} to access {resource_id}")
+#         access_control.add_policy(resource_id, user_id)
         
-        # Example: Check access
-        print(f"Checking if {user_id} can access {resource_id}")
-        has_access = access_control.evaluate_policy(resource_id, user_id)
-        print(f"Access granted: {has_access}")
+#         # Check access
+#         print(f"Checking if {user_id} can access {resource_id}")
+#         has_access = access_control.evaluate_policy(resource_id, user_id)
+#         print(f"Access granted: {has_access}")
         
-        # Example: Check access for unauthorized user
-        unauthorized_user = "bob"
-        print(f"Checking if {unauthorized_user} can access {resource_id}")
-        has_access = access_control.evaluate_policy(resource_id, unauthorized_user)
-        print(f"Access granted: {has_access}")
+#         # Check access for unauthorized user
+#         unauthorized_user = "bob"
+#         print(f"Checking if {unauthorized_user} can access {resource_id}")
+#         has_access = access_control.evaluate_policy(resource_id, unauthorized_user)
+#         print(f"Access granted: {has_access}")
         
-    except Exception as e:
-        print(f"Error: {e}")
+#     except Exception as e:
+#         print(f"Error: {e}")
