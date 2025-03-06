@@ -4,11 +4,15 @@ pragma solidity ^0.8.28;
 contract AccessControl {
     // Mapping from resource ID to permitted user identifiers
     mapping(string => mapping(string => bool)) public permissions;
-    
+
     // Events
     event PolicyAdded(string resourceId, string subscriberId);
     event PolicyDeleted(string resourceId, string subscriberId);
-    event PolicyEvaluated(string resourceId, string requesterId, bool authorized);
+    event PolicyEvaluated(
+        string resourceId,
+        string requesterId,
+        bool authorized
+    );
 
     // Function to add policy (share access)
     function addPolicy(
@@ -27,7 +31,7 @@ contract AccessControl {
         permissions[resourceId][subscriberId] = false;
         emit PolicyDeleted(resourceId, subscriberId);
     }
-    
+
     // Function to evaluate policy (check access)
     function evaluatePolicy(
         string memory resourceId,
