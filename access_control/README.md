@@ -1,14 +1,8 @@
 # Access Control Smart Contract
 
-
-## Smart Contract Features
-
-- Add access policies for resources
-- Evaluate if a user has access to a resource
-
 ## Deployment Guide (For smart contract)
 
-You can skip this step since we already deployed our contract (and we have the contract address) to Ethereum Test Net. Follow the below steps if you're curious to know, or you want to re-deploy the contract for some reason. If we want to update the contract, we need to redeploy it.
+Skip this step since we already deployed our contract (and we have the contract address) to Ethereum Test Net. Follow the steps below if you're curious to know or want to redeploy the contract for some reason. If we want to update the contract, we need to redeploy it.
 
 ### Prerequisites
 
@@ -45,8 +39,9 @@ You can skip this step since we already deployed our contract (and we have the c
    npx hardhat verify --network sepolia CONTRACT_ADDRESS
    ```
    Replace `CONTRACT_ADDRESS` with the address output from the deployment step.
+   
 
-## Interacting with the Contract
+## Interacting with the Contract (Post Deployment)
 
 After deployment, you can interact with the contract using the provided Python script or directly through Etherscan.
 
