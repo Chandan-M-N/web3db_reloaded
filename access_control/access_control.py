@@ -239,38 +239,37 @@ class AccessControl:
     
     def evaluate_policy(self, resource_id, requester_id):
         return self.contract.functions.evaluatePolicy(resource_id, requester_id).call()
-    
 
 
-if __name__ == "__main__":
-    try:
-        access_control = AccessControl()
+# if __name__ == "__main__":
+#     try:
+#         access_control = AccessControl()
         
-        # Add a policy
-        resource_id = "document123"
-        user_id = "alice"
-        print(f"Adding policy for {user_id} to access {resource_id}")
-        access_control.add_policy(resource_id, user_id)
+#         # Add a policy
+#         resource_id = "document123"
+#         user_id = "alice"
+#         print(f"Adding policy for {user_id} to access {resource_id}")
+#         access_control.add_policy(resource_id, user_id)
         
-        # Check access
-        print(f"Checking if {user_id} can access {resource_id}")
-        has_access = access_control.evaluate_policy(resource_id, user_id)
-        print(f"Access granted: {has_access}")
+#         # Check access
+#         print(f"Checking if {user_id} can access {resource_id}")
+#         has_access = access_control.evaluate_policy(resource_id, user_id)
+#         print(f"Access granted: {has_access}")
         
-        # Delete the policy
-        print(f"Revoking access for {user_id} to {resource_id}")
-        access_control.delete_policy(resource_id, user_id)
+#         # Delete the policy
+#         print(f"Revoking access for {user_id} to {resource_id}")
+#         access_control.delete_policy(resource_id, user_id)
         
-        # Check access after deletion
-        print(f"Checking if {user_id} can access {resource_id} after revocation")
-        has_access = access_control.evaluate_policy(resource_id, user_id)
-        print(f"Access granted: {has_access}")
+#         # Check access after deletion
+#         print(f"Checking if {user_id} can access {resource_id} after revocation")
+#         has_access = access_control.evaluate_policy(resource_id, user_id)
+#         print(f"Access granted: {has_access}")
         
-        # Check access for unauthorized user
-        unauthorized_user = "bob"
-        print(f"Checking if {unauthorized_user} can access {resource_id}")
-        has_access = access_control.evaluate_policy(resource_id, unauthorized_user)
-        print(f"Access granted: {has_access}")
+#         # Check access for unauthorized user
+#         unauthorized_user = "bob"
+#         print(f"Checking if {unauthorized_user} can access {resource_id}")
+#         has_access = access_control.evaluate_policy(resource_id, unauthorized_user)
+#         print(f"Access granted: {has_access}")
         
-    except Exception as e:
-        print(f"Error: {e}")
+#     except Exception as e:
+#         print(f"Error: {e}")
