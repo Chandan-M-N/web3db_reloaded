@@ -1,18 +1,59 @@
-flask
-pika
-'''
-mosquitto_pub -h 172.20.24.155 -t "topic/bp" -m 'payload:
-
-{
-
-  "time": "2024-01-31T12:00:00Z",
-  "data": {
-    "heart_rate": 60,
-    "blood_pressure": {
-      "sys": 120,
-      "dia": 80
-    }
-  }
-}'
-
-'''
+aiohappyeyeballs==2.5.0
+aiohttp==3.11.13
+aiosignal==1.3.2
+annotated-types==0.7.0
+attrs==25.1.0
+base58==2.1.1
+bitarray==3.1.1
+blinker==1.9.0
+certifi==2024.12.14
+charset-normalizer==3.4.1
+ckzg==2.0.1
+click==8.1.8
+cytoolz==1.0.1
+eth-account==0.13.5
+eth-hash==0.7.1
+eth-keyfile==0.8.1
+eth-keys==0.6.1
+eth-rlp==2.2.0
+eth-typing==5.2.0
+eth-utils==5.2.0
+eth_abi==5.2.0
+Flask==3.1.0
+Flask-Cors==5.0.0
+frozenlist==1.5.0
+hexbytes==1.3.0
+idna==3.10
+ipfsapi==0.4.4
+ipfshttpclient==0.4.13.2
+itsdangerous==2.2.0
+Jinja2==3.1.5
+MarkupSafe==3.0.2
+multiaddr==0.0.9
+multidict==6.1.0
+netaddr==1.3.0
+paho-mqtt==2.1.0
+parsimonious==0.10.0
+pika==1.3.2
+propcache==0.3.0
+psycopg2==2.9.10
+psycopg2-binary==2.9.10
+psycopg2-pool==1.2
+pycryptodome==3.21.0
+pydantic==2.10.6
+pydantic_core==2.27.2
+python-dotenv==1.0.1
+pyunormalize==16.0.0
+regex==2024.11.6
+requests==2.32.3
+rlp==4.1.0
+six==1.17.0
+toolz==1.0.0
+types-requests==2.32.0.20250306
+typing_extensions==4.12.2
+urllib3==2.3.0
+varint==1.0.2
+web3==7.8.0
+websockets==13.1
+Werkzeug==3.1.3
+yarl==1.18.3

@@ -3,6 +3,8 @@ import pika
 import os
 import random
 import string
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from ipfs_content import ipfs_operations as ipfs
 from database import db_operations as db
 
@@ -51,8 +53,8 @@ def process_message(ch, method, properties, body):
 
     if ipfs_output[0] != True:
         print("IPFS output not True")
-        ch.basic_ack(delivery_tag=method.delivery_tag)  # Debug statement to understand why we're skipping ACK
-        return  # Do not acknowledge; message will be requeued for retry
+        ch.basic_ack(delivery_tag=method.delivery_tag)  
+        return 
     cid = ipfs_output[1]
     db_output = db.add_hash(cid,topic)
     if db_output == False:
@@ -63,7 +65,6 @@ def process_message(ch, method, properties, body):
     ch.basic_ack(delivery_tag=method.delivery_tag)
     return
     
-
 
 def start_consumer():
     connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))

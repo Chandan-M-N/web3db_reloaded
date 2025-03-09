@@ -6,6 +6,14 @@ from ipfs_content import ipfs_operations as ipfs
 import os
 from flask_cors import CORS
 import hashlib
+from access_control.access_control import AccessControl
+
+
+try:
+    access_control = AccessControl()
+except Exception as e:
+    access_control = None
+    print(f"Error while setting up access control {e}")
 
 app = Flask(__name__)
 CORS(app)
@@ -157,8 +165,16 @@ def subscribe_devices():
     print(f"Devices to Subscribe: {subscribe_device_ids}")
 
     subs_id = hash_wallet_id(subscriber_eth_address)
+
     #add policy to contract
-    return jsonify({"message": "Subscription data received successfully"}), 200
+    if access_control is None:
+        return jsonify({"message": "Failed to connect to Ethereum network"}), 200
+    
+    op,message = access_control.add_policy(subscribe_device_ids,subs_id)
+
+    if op is False:
+        return jsonify({"status": "Failed","message":message}), 200
+    return jsonify({"status": "success","message":message}), 200
 
 
 @app.route('/access-device', methods=['POST'])
@@ -176,13 +192,14 @@ def access_subs_device():
         return jsonify({"status": "error", "message": "Request must contain 'time', 'topic', 'date' and 'wallet_id'"}), 400
 
     subs_id = hash_wallet_id(wallet_id)
-    if wallet_id in ['abcd12345']:
-        policy = True
-    else:
-        policy = False
+    
     #check policy in contract
-    if not policy:
-        return jsonify({"message": "Access denied"}), 403
+    if access_control is None:
+        return jsonify({"message": "Failed to connect to Ethereum network"}), 200
+    
+    message, op = access_control.evaluate_policy(subs_id)
+    if op is False:
+        return jsonify({"status": "Access denied","message":message}), 200
 
     # Fetch CIDs for the given time period
     hash_list,message = db.fetch_cids_by_time(date,time,topic)
@@ -214,7 +231,6 @@ def access_subs_device():
         # Return a response if no CIDs are found
         return jsonify({"status": "success", "message": f"{message}"}), 200
 
-    
 
 
 @app.route('/get-registered-devices',methods=['POST'])

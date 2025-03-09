@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 class AccessControl:
     def __init__(self, contract_address=None, infura_api_key=None, private_key=None):
         
-        load_dotenv()
+        load_dotenv("access_control/web3db.env")
         
         self.infura_api_key = infura_api_key or os.getenv("INFURA_API_KEY")
         self.private_key = private_key or os.getenv("PRIVATE_KEY")
@@ -13,7 +13,6 @@ class AccessControl:
         
         # Connect to Sepolia network
         self.w3 = Web3(Web3.HTTPProvider(f"https://sepolia.infura.io/v3/{self.infura_api_key}"))
-        
         # Check connection
         if not self.w3.is_connected():
             raise Exception("Failed to connect to Ethereum network")
@@ -178,34 +177,39 @@ class AccessControl:
         self.contract = self.w3.eth.contract(address=self.contract_address, abi=self.abi)
         
     def add_policy(self, resource_id, subscriber_id):
-        # Build transaction
-        nonce = self.w3.eth.get_transaction_count(self.address)
+        try:
+            # Build transaction
+            nonce = self.w3.eth.get_transaction_count(self.address)
+            
+            tx = self.contract.functions.addPolicy(
+                resource_id,
+                subscriber_id
+            ).build_transaction({
+                'from': self.address,
+                'gas': 2000000,
+                'gasPrice': self.w3.eth.gas_price,
+                'nonce': nonce,
+            })
+            
+            # Sign and send transaction
+            signed_tx = self.w3.eth.account.sign_transaction(tx, self.private_key)
+            tx_hash = self.w3.eth.send_raw_transaction(signed_tx.raw_transaction)
+            
+            # Wait for transaction receipt
+            print(f"Transaction sent: {tx_hash.hex()}")
+            tx_receipt = self.w3.eth.wait_for_transaction_receipt(tx_hash)
+            print(f"Transaction confirmed in block {tx_receipt['blockNumber']}")
+            
+            # Process events
+            logs = self.contract.events.PolicyAdded().process_receipt(tx_receipt)
+            if logs:
+                print(f"Policy added: {logs[0]['args']}")
+            
+            return True, tx_receipt
         
-        tx = self.contract.functions.addPolicy(
-            resource_id,
-            subscriber_id
-        ).build_transaction({
-            'from': self.address,
-            'gas': 2000000,
-            'gasPrice': self.w3.eth.gas_price,
-            'nonce': nonce,
-        })
-        
-        # Sign and send transaction
-        signed_tx = self.w3.eth.account.sign_transaction(tx, self.private_key)
-        tx_hash = self.w3.eth.send_raw_transaction(signed_tx.raw_transaction)
-        
-        # Wait for transaction receipt
-        print(f"Transaction sent: {tx_hash.hex()}")
-        tx_receipt = self.w3.eth.wait_for_transaction_receipt(tx_hash)
-        print(f"Transaction confirmed in block {tx_receipt['blockNumber']}")
-        
-        # Process events
-        logs = self.contract.events.PolicyAdded().process_receipt(tx_receipt)
-        if logs:
-            print(f"Policy added: {logs[0]['args']}")
-        
-        return tx_receipt
+        except Exception as e:
+            print(f"Failed to add policy {e}")
+            return False, e
     
     def delete_policy(self, resource_id, subscriber_id):
         # Build transaction
@@ -238,12 +242,16 @@ class AccessControl:
         return tx_receipt
     
     def evaluate_policy(self, resource_id, requester_id):
-        return self.contract.functions.evaluatePolicy(resource_id, requester_id).call()
+        try:
+            return self.contract.functions.evaluatePolicy(resource_id, requester_id).call(), True
+        except Exception as e:
+            print(e)
+            return e, False
 
 
 # if __name__ == "__main__":
 #     try:
-#         access_control = AccessControl()
+# access_control = AccessControl()
         
 #         # Add a policy
 #         resource_id = "document123"
