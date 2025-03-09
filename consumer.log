@@ -1,1 +1,255 @@
 nohup: ignoring input
+Trying to connect to host: localhost
+Connected to host: localhost
+ [*] Waiting for messages. To exit press CTRL+C
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741000494, "value": 120}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741000494, 'value': 120}
+ [x] Payload saved to dumps/BWn4JqcXNk0KCjc98ehgFqURlgIZmGucq2ZVz0XG0bb34z.json
+{'cid': 'QmcfftiiwVkE6475raHLmP7tgKmpqUpJf3KkvG4Tn6nPJL'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741018494, "value": 130}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741018494, 'value': 130}
+ [x] Payload saved to dumps/kDEYKP6uW0Mk26In29Od6f0OOS8ditX8HrA2VO7A3zbTHg.json
+{'cid': 'QmcpdPUwReMFPYnSCCaLC5N2De9G4x75VfsMdcjoeQcLfD'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741025694, "value": 90}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741025694, 'value': 90}
+ [x] Payload saved to dumps/mXaFUYYnVjwdaskXITOiMgXaL9GiaVUvVGLlq6aSw176Ux.json
+{'cid': 'QmXrkYwJK5eA4fcJdQTA4sXHEUkcFYC2pDMUxs9wRNefWm'}
+Received message: b'{"topic": null, "payload": null}'
+ [x] Topic: None
+ [x] Payload: None
+ [x] Payload saved to dumps/JieUOaMAykbcjn0xhPYctffXeb6KEHObv7zs4d3qT7AOBx.json
+{'cid': 'QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU'}
+Error executing query: null value in column "topic" violates not-null constraint
+
+Adding CID to database failed, None,None,QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU
+Received message: b'{"topic": null, "payload": null}'
+ [x] Topic: None
+ [x] Payload: None
+ [x] Payload saved to dumps/7FmhqRSURRxAEhpjLs6zcAexuMQDDQaYnuQsdKuaCPjC2n.json
+{'cid': 'QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU'}
+Error executing query: null value in column "topic" violates not-null constraint
+
+Adding CID to database failed, None,None,QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU
+Received message: b'{"topic": null, "payload": null}'
+ [x] Topic: None
+ [x] Payload: None
+ [x] Payload saved to dumps/sedSSbcV1SnQuqTpjmQVUeWt8iVYLB6Y2O40bTZNIvn90h.json
+{'cid': 'QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU'}
+Error executing query: null value in column "topic" violates not-null constraint
+
+Adding CID to database failed, None,None,QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU
+Received message: b'{"topic": null, "payload": null}'
+ [x] Topic: None
+ [x] Payload: None
+ [x] Payload saved to dumps/FVoktktZgM1AkrlVyDVIP2pDqOM4scRt0vViZNGnIzF7gD.json
+{'cid': 'QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU'}
+Error executing query: null value in column "topic" violates not-null constraint
+
+Adding CID to database failed, None,None,QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU
+Received message: b'{"topic": "data_type", "payload": {"category": "Home", "measurement": "Degrees", "value": "Heat"}}'
+ [x] Topic: data_type
+ [x] Payload: {'category': 'Home', 'measurement': 'Degrees', 'value': 'Heat'}
+ [x] Payload saved to dumps/53vSU5abhRtC6gZbPpFlwJ4q52RsMDLuCtzUltj3vKALBq.json
+{'cid': 'QmbvWmyfb8t8mYYDSncG4nc4boMjTck9cyUTSW959gGtpt'}
+Received message: b'{"topic": null, "payload": null}'
+ [x] Topic: None
+ [x] Payload: None
+ [x] Payload saved to dumps/btStOHKONgAM6En3ayz9T9nDZkni3pE0n8qUO4repkLdoR.json
+{'cid': 'QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU'}
+Error executing query: null value in column "topic" violates not-null constraint
+
+Adding CID to database failed, None,None,QmbF6AKvzZ2fV7GubWq9v2P6qLMXyL6Y4ebZY8hrBng7QU
+Received message: b'{"topic": "data_type", "payload": {"value": "Humidity", "category": "Weather", "measurement": "g/kg"}}'
+ [x] Topic: data_type
+ [x] Payload: {'value': 'Humidity', 'category': 'Weather', 'measurement': 'g/kg'}
+ [x] Payload saved to dumps/rnUh6hORioFU1QOi2WVPZRDTmMGH6Q3A1HqUO32zbOFAjx.json
+{'cid': 'QmYLWGwz82hmApcKpE2piyPcUzasecyYXPuQKFAdjiEz8H'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1740986094, "value": 60}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1740986094, 'value': 60}
+ [x] Payload saved to dumps/FgJ07ZACimKxnqaGHHEttbBH9lyUTN7WtHxPv8ao3fIfHn.json
+{'cid': 'QmS8Jv1Ks84kuckEv3fKQDzp3DNmVz2q5h22sYTMspTwvk'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036352.4617343, "value": 70.01}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036352.4617343, 'value': 70.01}
+ [x] Payload saved to dumps/gLRALaZvh1RTTp2g0ZOFkVgGq6NWP6prKWDasoeR2jUtFq.json
+{'cid': 'QmeJZgn8qAY5MwGpyaS2eg3cn98F6TScCzLYM43mvZhoEV'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036361.5718794, "value": 75.57}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036361.5718794, 'value': 75.57}
+ [x] Payload saved to dumps/9lkcxujVRTiP93ncUf4Zg5xRgtjTXydZZgwDZRQCNKGLg1.json
+{'cid': 'QmScsu3rwyFkfhCXrRBw9Z5MHrrasZheysWtegHcBqyptr'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036370.81729, "value": 78.58}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036370.81729, 'value': 78.58}
+ [x] Payload saved to dumps/lKk0oixkKoXFZSexRVgiC3XBDuJevuO3ltzfpd0KPGjKK6.json
+{'cid': 'QmZPxhgGBjDqCxRTPp8oX7yy3Ft41yC3Ji5dXrp8i8aeYv'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036379.9548452, "value": 73.99}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036379.9548452, 'value': 73.99}
+ [x] Payload saved to dumps/kiCmGBtt9ZgT8Fj55VR0tPQmeMydDazG7omY7yDXDYYM3V.json
+{'cid': 'QmRJCRYzzqWTcXqjCzMtwFFtru5tmg7zAU79ZsfGwwGkbG'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036389.1907084, "value": 73.85}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036389.1907084, 'value': 73.85}
+ [x] Payload saved to dumps/cGBQ43JHIHHj51pT32mz9QEqRCYEZ8OlQkW1GC4A5MPcui.json
+{'cid': 'QmQVbABHjwygGkHzaXYbvStPrM3uBLiMkapbhKy4fzURkF'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036398.6134377, "value": 77.64}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036398.6134377, 'value': 77.64}
+ [x] Payload saved to dumps/YSZI6NZhs4ShbHb1lsP49xnY2ILPJRXRZdk1QiKgpqPGt2.json
+{'cid': 'QmfSy5As7H8kNWMqN9sU5mNz1At43QXfijcY8qnVT9Yu34'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036407.8117852, "value": 71.35}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036407.8117852, 'value': 71.35}
+ [x] Payload saved to dumps/JySLDz5oOO1WIEbIFV48ff6RFP55wUKWmIGlNJZtGJ5fIO.json
+{'cid': 'QmbM1nKJiME3AFwLJynVwqr5nVfWJ7W3vMHK9eLAcg4ATq'}
+Received message: b'{"topic": "heart_rate", "payload": {"timestamp": 1741036417.0766737, "value": 70.44}}'
+ [x] Topic: heart_rate
+ [x] Payload: {'timestamp': 1741036417.0766737, 'value': 70.44}
+ [x] Payload saved to dumps/badUqyYvmIGhDJ63amLKxt2Se36U6xmiW8QEayZxSomzUy.json
+{'cid': 'QmcDMZdNkMidiNaULuYjucn2HsCeuaWwPkA3nWBr5Gaemc'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741036533.2441545, "value": 74.78}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741036533.2441545, 'value': 74.78}
+ [x] Payload saved to dumps/BcB0UhMHz49HJzQ0HkbKKaT7OoQxm6OEd9hRRKNWriYwiv.json
+{'cid': 'QmX8cRekcAY2FUhwLQWZWjY6ftwCzG6oHoiggoVVYNShdR'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741036542.3953042, "value": 72.27}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741036542.3953042, 'value': 72.27}
+ [x] Payload saved to dumps/jOPijKhcTmVfZ8va3JC3p7FSo3scaoYsCcFlXQNssMVN83.json
+{'cid': 'QmZuxhTKVHGqP9WyUWCPner1UMbrj93dQHDPUoeP5VePf4'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741036551.673056, "value": 78.97}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741036551.673056, 'value': 78.97}
+ [x] Payload saved to dumps/SMHuhiVvMr7UpitHYiU5VOL8a9Tok7yMCr5qQOrm6PEmnk.json
+{'cid': 'QmQHmy7vru5DyYG5EfXFA12LZZLnY6zEmrWUy8EfAizp2N'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741036560.798178, "value": 74.27}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741036560.798178, 'value': 74.27}
+ [x] Payload saved to dumps/R4iMi1DriXceIE92U0EeN7Yfa8DW124K5me5GV9AAej7UL.json
+{'cid': 'QmYqov87iovWG92oRS5yBmTF1c1UhnhLXj3RmZmysXXCTd'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741036569.9605658, "value": 79.64}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741036569.9605658, 'value': 79.64}
+ [x] Payload saved to dumps/YpTl2NDy3rLtac3C596XscDGMK5jrPUvpAgZkZNe7cIlA6.json
+{'cid': 'QmQdGJNMp6RLq7LBVzHPagRab7CiJb26cnDM8TefagfTZd'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741036579.1060014, "value": 74.82}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741036579.1060014, 'value': 74.82}
+ [x] Payload saved to dumps/eWbnvu6fbz8RlFI6zmYpTY2sJEBxDuBMEo747HRmwRVhw4.json
+{'cid': 'QmbYEQ4TU35CoZDuVNqVVFrSwJ5KTVYutyP76M4BYrfzXt'}
+Received message: b'{"topic": "sensor/heart_rate", "payload": {"type": "heart_rate", "timestamp": 1741036596.658724, "value": 76.09}}'
+ [x] Topic: sensor/heart_rate
+ [x] Payload: {'type': 'heart_rate', 'timestamp': 1741036596.658724, 'value': 76.09}
+ [x] Payload saved to dumps/WxsKCXzrBwP7QIQV5pAVM3er3lCu1KRY40wwJHn9ReB1SS.json
+{'cid': 'QmQqyy565ceH1H3HZJDx8sdzGVF2y62YqFiCETLKVw1uEM'}
+Received message: b'{"topic": "sensor/heart_rate", "payload": {"type": "heart_rate", "timestamp": 1741036605.711352, "value": 74.2}}'
+ [x] Topic: sensor/heart_rate
+ [x] Payload: {'type': 'heart_rate', 'timestamp': 1741036605.711352, 'value': 74.2}
+ [x] Payload saved to dumps/qghCeaU8DutN4p4P522n4F463CAyUgkrNJnz9qafbwfiyf.json
+{'cid': 'QmTFo4aFvexEgnDu5uHfUuXSGmRcGy6mmsyBoyWaZY7L1P'}
+Received message: b'{"topic": "sensor/heart_rate", "payload": {"type": "heart_rate", "timestamp": 1741036614.7704089, "value": 74.31}}'
+ [x] Topic: sensor/heart_rate
+ [x] Payload: {'type': 'heart_rate', 'timestamp': 1741036614.7704089, 'value': 74.31}
+ [x] Payload saved to dumps/cphoObtFpnyfcA5JlaGjpXRDYvop9hqelV6Kf8IJ9K35dy.json
+{'cid': 'QmZ3wfAdjJ3fz1swaqsXonMckMFRrvkX7cpY3mx4NVC7Zg'}
+Received message: b'{"topic": "sensor/heart_rate", "payload": {"type": "heart_rate", "timestamp": 1741036623.8601952, "value": 71.68}}'
+ [x] Topic: sensor/heart_rate
+ [x] Payload: {'type': 'heart_rate', 'timestamp': 1741036623.8601952, 'value': 71.68}
+ [x] Payload saved to dumps/WCS6DicqVnuxD0ARo6KQvqGC7Qk13iemtFoPeVqK0UgzqJ.json
+{'cid': 'QmTRoNFjm1zBfwohLuHfZ2V2V6UR4PciZAfZr9mDFvvr8C'}
+Received message: b'{"topic": "sensor/heart_rate", "payload": {"type": "heart_rate", "timestamp": 1741036632.9295511, "value": 73.63}}'
+ [x] Topic: sensor/heart_rate
+ [x] Payload: {'type': 'heart_rate', 'timestamp': 1741036632.9295511, 'value': 73.63}
+ [x] Payload saved to dumps/nekWr0XovykWYFPiK7at4ZYtLPikgy9YZ2m3LPAiqjh4ZD.json
+{'cid': 'QmeiSQWnGRxHPUa2RwWhtghnZazE7rdg7wchXeKyA6PfR3'}
+Received message: b'{"topic": "sensor/heart_rate", "payload": {"type": "heart_rate", "timestamp": 1741036642.0422678, "value": 70.94}}'
+ [x] Topic: sensor/heart_rate
+ [x] Payload: {'type': 'heart_rate', 'timestamp': 1741036642.0422678, 'value': 70.94}
+ [x] Payload saved to dumps/lfKOoQ8sVTA8oZCRQvaZuVfIoFeTANuMKLSQOjwCh7twvc.json
+{'cid': 'QmY1cLw1QScDdutKLQ7xY2nDSCfLeqZyi2xrE2vLPntpAR'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037076.4716384, "value": 71.68}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037076.4716384, 'value': 71.68}
+ [x] Payload saved to dumps/TpqgoB9LGSvg9gthUFGmss5WsPLvxyaGzHVM4qE8AZwPlT.json
+{'cid': 'QmSVuavhaXkUmaEW8CPegdDEWvecku2sHQz35J49na3Ts4'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037085.557039, "value": 75.89}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037085.557039, 'value': 75.89}
+ [x] Payload saved to dumps/k6HjameCYTsWzPVNfLtGxM8r6NTpLDimPwAOtx8DRKYSZR.json
+{'cid': 'QmXYkQV2M3Ed3uE9YLa5snhEhUeSVkRSdn5akeyAnEoSat'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037094.6846895, "value": 77.93}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037094.6846895, 'value': 77.93}
+ [x] Payload saved to dumps/uK7ZgBfpUfjRVTZ08ZmdXV0eZvJbcllnvgdeK4WkabO1Hc.json
+{'cid': 'QmQeRPCBm8MK4y32EowMHrhq24288JLT1hNgmJ8Mc8jBTG'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037103.7931962, "value": 71.86}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037103.7931962, 'value': 71.86}
+ [x] Payload saved to dumps/yVB9fjPbzFV7y5PwOj2DYnJz6VYIkCNBdO3zFaxKpaPCiY.json
+{'cid': 'QmSeMeP2zMpb7T2wUCUxEXkkndwSASpGCE6zKfFTwQLTuc'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037112.9017801, "value": 71.48}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037112.9017801, 'value': 71.48}
+ [x] Payload saved to dumps/nt7LivD7pPaKGZaX12hdip2HnjIBgiqj7Gae2nEn5NfsxN.json
+{'cid': 'QmS9rV9MSvbAvHPtNqr1Hhw6Rq1QAnM8ANQrTYatiW2bBG'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037122.065629, "value": 70.79}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037122.065629, 'value': 70.79}
+ [x] Payload saved to dumps/EDnGHcch1QtdhjrjCtAH8Qq2q8bJ27tIeVyRJ6EHk88z9R.json
+{'cid': 'QmVcsprK8FEAEDfyC9aGbNBVFwDkcE3h3u6QiQHbgNeLyE'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037131.188927, "value": 72.87}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037131.188927, 'value': 72.87}
+ [x] Payload saved to dumps/Hs93bP9UBt7bK6rnzAlJPcWZywaegsMOiKbLrWlTKLxgDQ.json
+{'cid': 'QmcXARhG3DfgX8UR8Cnhm1sKmBDg6cwYgwmnWo7PnZkPTB'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037140.3449838, "value": 73.96}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037140.3449838, 'value': 73.96}
+ [x] Payload saved to dumps/xyUW6A5sBJfKPlqW0qbvG7wW9Cf99oJx7tf8bfGTiUsjZy.json
+{'cid': 'QmXUgeDR6xd7myqXH8rk5sRydvxBpgYBRnKY6U6wgVsfoJ'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037149.5364873, "value": 79.01}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037149.5364873, 'value': 79.01}
+ [x] Payload saved to dumps/oUjFECp69pHsxnORkiJGXQ9Q7eLGCcu9OL6ptLSyNNspW2.json
+{'cid': 'QmdKXd66ZU11tj3oHWQErMgex3H79K4GAUBE7nFCYdu44Y'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037158.6573768, "value": 76.65}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037158.6573768, 'value': 76.65}
+ [x] Payload saved to dumps/2f7nVb5og5nzN2KZTiBzP0joCuZrqRz8O6lebW97ohqiz8.json
+{'cid': 'QmRoYmW3CSebzZF4PxMZ9f3eUNaN8WAFpnLwFt3rQCXn7M'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037167.863618, "value": 72.78}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037167.863618, 'value': 72.78}
+ [x] Payload saved to dumps/ZUqLExWof61QbQx54QkTda1cRezMjdHuvfJIInz14NkuQB.json
+{'cid': 'QmZCrVgFvry1rpEAQLhFgWboGqLvjKttP6CBGizSw2bfoi'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037177.0301275, "value": 74.59}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037177.0301275, 'value': 74.59}
+ [x] Payload saved to dumps/p7jwF47vdsTdgBdm8NpHp8ZvuQQLPYT1LJi1FU4rXjJhVj.json
+{'cid': 'QmXS1ToE49dSn4pdmo2U9yLiUcBdWDrJZLe4onhHUbYYWn'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037186.179709, "value": 70.87}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037186.179709, 'value': 70.87}
+ [x] Payload saved to dumps/EUfBBQs6RoMCKRq6JPoFL7MP4IKsUrBr9aSKGO4r4dKZmi.json
+{'cid': 'QmdxghUnCt1h4b5E8N8ZQEs8eNqfVnbukUrZxqSbUyQjUJ'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037195.3687327, "value": 75.94}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037195.3687327, 'value': 75.94}
+ [x] Payload saved to dumps/aNFyWPVlXSMLCu1Rd2f6qFtarKiB2YlwclTVhHvaTXLpD0.json
+{'cid': 'QmNsDcozU2xg24CZmzyszwGmpPgmpH3bxHMeBM1CFrPrSf'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037204.5866094, "value": 76.66}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037204.5866094, 'value': 76.66}
+ [x] Payload saved to dumps/pdxvb2HWVNoApAFTnP1Uubd0F18FJWVUljhAl0WtvNnhDg.json
+{'cid': 'QmQPY9jKsxK9sgpDd7DTZVyRwLK27b5ijho1JaYATDk9AA'}
+Received message: b'{"topic": "Heart Rate", "payload": {"timestamp": 1741037213.8303459, "value": 75.66}}'
+ [x] Topic: Heart Rate
+ [x] Payload: {'timestamp': 1741037213.8303459, 'value': 75.66}
+ [x] Payload saved to dumps/kph0lyTNavpwMCZdxJqeeF402DcI5xjgdxYcrU1aAU7MoK.json
+{'cid': 'QmXNjTjv2dUwXiwcxZ44Ed3WqYeQ5dN3cz9AmQeK7JEmTX'}
+Received message: 

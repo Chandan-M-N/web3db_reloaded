@@ -50,7 +50,7 @@ def process_message(ch, method, properties, body):
     silentremove(filename)
 
     if ipfs_output[0] != True:
-        print("IPFS output not True, skipping ACK")
+        print("IPFS output not True")
         ch.basic_ack(delivery_tag=method.delivery_tag)  # Debug statement to understand why we're skipping ACK
         return  # Do not acknowledge; message will be requeued for retry
     cid = ipfs_output[1]
