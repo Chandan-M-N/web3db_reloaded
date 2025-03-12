@@ -129,20 +129,40 @@ def devices():
     # Extract wallet_id and device_id from the JSON data
     wallet_id = data.get("wallet_id", None)
     device_id = data.get("device_id", None)
+    name = data.get("name", None)
+    category = data.get("category",None)
+    measurement_units = data.get("measurement_unit",None)
+
 
     # Validate wallet_id and device_id
     if wallet_id is None:
         return jsonify({"status": "error", "message": "No wallet_id provided in the request body"}), 400
     if device_id is None:
         return jsonify({"status": "error", "message": "No device_id provided in the request body"}), 400
+    if category is None or measurement_units is None or name is None:
+        return jsonify({"status": "error", "message": "Please provide category, measurement_units and name in the request body"}), 400
 
     # Split device_id into a list of individual device IDs if it contains commas
     device_ids = [id.strip() for id in device_id.split(",")] if device_id else []
+    category_list = [id.strip() for id in category.split(",")] if category else []
+    measurement_units_list = [id.strip() for id in measurement_units.split(",")] if measurement_units else []
+    names = [id.strip() for id in name.split(",")] if name else []
 
     # Print wallet_id and device_ids for debugging
     print(f"Wallet ID: {wallet_id}")
     print(f"Device IDs: {device_ids}")
-    output = db.add_device(wallet_id,device_ids)
+    print(f"Categories: {category_list}")
+    print(f"Measurement Units: {measurement_units_list}")
+    print(f"Names: {names}")
+
+    if len(device_ids) != len(category_list):
+        return jsonify({"status": "error", "message": "The number of categories does not match the number of devices"}), 400
+    if len(device_ids) != len(measurement_units_list):
+        return jsonify({"status": "error", "message": "The number of measurement units does not match the number of devices"}), 400
+    if len(device_ids) != len(names):
+        return jsonify({"status": "error", "message": "The number of names does not match the number of devices"}), 400
+
+    output = db.add_device(wallet_id,device_ids,names,category_list,measurement_units_list)
     # Return a success response
     return jsonify(output), 200
 

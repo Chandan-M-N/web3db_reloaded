@@ -232,7 +232,7 @@ def hash_wallet_id(wallet_id):
     """
     return hashlib.sha256(wallet_id.encode()).hexdigest()
 
-def add_device(wallet_id, device_ids):
+def add_device(wallet_id, device_ids,names, category_list, measurement_unit_list):
     """
     Add a wallet_id (hashed) and associated device_ids to the device_list table.
 
@@ -249,8 +249,8 @@ def add_device(wallet_id, device_ids):
 
         # Prepare the insert query
         insert_query = """
-        INSERT INTO device_list (hash_of_wallet_id, device_id)
-        VALUES (%s, %s)
+        INSERT INTO device_list (hash_of_wallet_id, device_id, name, category, measurement_unit)
+        VALUES (%s, %s, %s, %s, %s)
         ON CONFLICT (device_id) DO NOTHING; 
         """
 
@@ -258,16 +258,13 @@ def add_device(wallet_id, device_ids):
         failed_device_ids = []
 
         # Loop through device_ids and insert them
-        for device_id in device_ids:
-            if not device_id:
-                continue  # Skip empty device IDs
-
+        for x in range(len(device_ids)):
             # Execute the query
-            success = execute_query(insert_query, (hashed_wallet_id, device_id))
+            success = execute_query(insert_query, (hashed_wallet_id, device_ids[x], names[x], category_list[x],measurement_unit_list[x]))
             if success:
-                inserted_device_ids.append(device_id)
+                inserted_device_ids.append((device_ids[x], names[x], category_list[x],measurement_unit_list[x]))
             else:
-                failed_device_ids.append(device_id)
+                failed_device_ids.append(device_ids[x],names[x], category_list[x],measurement_unit_list[x])
 
         # Prepare the response
         if inserted_device_ids:
@@ -305,7 +302,7 @@ def get_user_devices(wallet_id):
     try:
         # Prepare the select query
         select_query = """
-        SELECT device_id 
+        SELECT device_id,name,category,measurement_unit 
         FROM device_list
         WHERE hash_of_wallet_id = %s;
         """
@@ -314,7 +311,9 @@ def get_user_devices(wallet_id):
         connection = connection_pool.getconn()
         cursor = connection.cursor()
         cursor.execute(select_query, (wallet_id,))
-        results = [row[0] for row in cursor.fetchall()]
+        # Fetch all rows and convert them into a list of dictionaries
+        columns = [desc[0] for desc in cursor.description]  # Get column names
+        results = [dict(zip(columns, row)) for row in cursor.fetchall()]
         cursor.close()
         connection_pool.putconn(connection)
 

@@ -1,0 +1,583 @@
+nohup: ignoring input
+Trying to connect to host: localhost
+Connected to host: localhost
+Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
+ * Serving Flask app 'backend'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5100
+ * Running on http://192.168.1.132:5100
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 459-411-025
+127.0.0.1 - - [09/Mar/2025 01:42:06] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:11] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:15] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:20] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:24] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:29] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:34] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:38] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:43] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:47] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:52] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:42:56] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:43:36] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:43:41] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [09/Mar/2025 01:43:46] "POST /add-medical HTTP/1.1" 200 -
+99.89.90.55 - - [09/Mar/2025 14:05:50] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+99.89.90.55 - - [09/Mar/2025 14:07:25] "OPTIONS /get-medical HTTP/1.1" 200 -
+99.89.90.55 - - [09/Mar/2025 14:07:25] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+99.89.90.55 - - [09/Mar/2025 14:07:43] "OPTIONS /add-medical HTTP/1.1" 200 -
+99.89.90.55 - - [09/Mar/2025 14:07:43] "POST /add-medical HTTP/1.1" 200 -
+99.89.90.55 - - [09/Mar/2025 14:07:48] "OPTIONS /get-medical HTTP/1.1" 200 -
+99.89.90.55 - - [09/Mar/2025 14:07:48] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+108.169.220.182 - - [09/Mar/2025 21:33:08] "[33mOPTIONS /fetch-medical HTTP/1.1[0m" 404 -
+198.137.18.240 - - [10/Mar/2025 14:27:55] "[33mOPTIONS /fetch-medical HTTP/1.1[0m" 404 -
+198.137.18.240 - - [10/Mar/2025 14:27:58] "[33mOPTIONS /fetch-medical HTTP/1.1[0m" 404 -
+198.137.18.226 - - [11/Mar/2025 15:49:08] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:49:08] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 15:51:25] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:51:25] "[31m[1mPOST /get-registered-devices HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 15:51:44] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:51:44] "[31m[1mPOST /get-registered-devices HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 15:51:47] "[31m[1mPOST /get-registered-devices HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 15:51:50] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:51:50] "[31m[1mPOST /get-registered-devices HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 15:51:56] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:51:56] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:52:58] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:52:58] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:53:35] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:53:35] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:53:37] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:53:39] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:53:40] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:56:12] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:56:12] "[31m[1mPOST /get-registered-devices HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 15:56:14] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:56:24] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:56:24] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:56:40] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:56:40] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:56:44] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:57:17] "OPTIONS /add-device HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:57:17] "POST /add-device HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:57:22] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 15:57:22] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:02:44] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:02:44] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:03:06] "OPTIONS /add-device HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:03:06] "POST /add-device HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:03:12] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:03:12] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:04:34] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:04:34] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:05:56] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:05:56] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:06:07] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:06:07] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:06:17] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:06:17] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:06:27] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:06:27] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:06:37] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:06:37] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:06:47] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:06:47] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:06:57] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:06:57] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:07:11] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:07:11] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:07:22] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:07:22] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:07:32] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:07:32] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:07:42] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:07:42] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:07:52] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:07:52] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:08:02] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:08:02] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:08:02] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:08:02] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:09:20] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:09:20] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:09:21] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:09:31] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:09:31] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:09:41] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:09:41] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:09:52] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:09:52] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:10:02] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:10:02] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:10:12] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:10:12] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:10:22] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:10:22] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:10:32] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:10:32] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:10:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:10:43] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:11:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:11:43] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:11:57] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:11:57] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:12:01] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:12:12] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:12:12] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:12:22] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:12:22] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:12:32] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:12:32] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:12:42] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:12:42] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:12:52] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:12:52] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:13:02] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:02] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:13:12] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:12] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:13:13] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:13:24] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:24] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:13:33] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:33] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:13:38] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:40] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:40] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:50] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:50] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:51] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:52] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:52] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:52] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:52] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:53] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:53] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:53] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:53] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:54] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:54] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:54] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:55] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:55] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:55] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:56] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:56] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:13:58] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:01] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:01] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:11] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:11] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:13] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:14] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:15] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:15] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:16] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:16] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:17] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:18] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:19] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:20] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:20] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:21] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:26] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:26] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:29] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:29] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:29] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:29] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:29] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:30] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:31] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:31] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:31] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:31] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:31] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:32] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:32] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:53] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:14:53] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:03] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:03] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:13] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:13] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:23] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:23] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:33] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:33] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:15:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:16:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:16:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:17:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:17:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:18:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:18:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:00] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:00] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:03] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:13] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:13] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:23] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:23] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:33] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:33] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:53] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:19:53] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:20:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:20:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:21:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:21:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:22:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:22:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:23:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:23:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:24:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:24:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:25:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:25:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:26:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:26:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:27:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:27:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:28:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:28:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:29:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:29:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:30:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:30:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:31:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:31:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:32:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:32:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:33:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:33:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:34:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:34:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:35:30] "POST /add-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:35:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:35:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:35:49] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:35:49] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:35:54] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:04] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:04] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:14] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:14] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:24] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:24] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:34] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:34] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:44] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:44] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:54] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:36:54] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:04] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:04] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:14] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:14] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:24] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:24] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:34] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:34] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:44] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:44] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:54] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:37:54] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:04] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:04] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:14] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:14] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:24] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:24] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:34] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:34] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:44] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:44] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:54] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:38:54] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:04] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:04] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:14] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:14] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:24] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:24] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:39:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:40:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:40:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:41:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:41:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:42:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:42:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:43:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:43:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:44:43] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:44:43] "POST /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:45:40] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:45:40] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:45:44] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:45:49] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:45:49] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:45:59] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:46:01] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:46:11] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:46:11] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:46:21] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:46:21] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:46:31] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:46:31] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:46:41] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:46:41] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:46:51] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:46:51] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:47:01] "OPTIONS /get-medical HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:47:01] "[31m[1mPOST /get-medical HTTP/1.1[0m" 400 -
+198.137.18.226 - - [11/Mar/2025 16:47:07] "OPTIONS /get-registered-devices HTTP/1.1" 200 -
+198.137.18.226 - - [11/Mar/2025 16:47:07] "POST /get-registered-devices HTTP/1.1" 200 -
+198.137.18.64 - - [12/Mar/2025 14:33:14] "[33mOPTIONS /fetch-medical HTTP/1.1[0m" 404 -
+198.137.18.64 - - [12/Mar/2025 14:33:20] "[33mOPTIONS /fetch-medical HTTP/1.1[0m" 404 -
+198.137.18.64 - - [12/Mar/2025 16:34:01] "[33mOPTIONS /fetch-medical HTTP/1.1[0m" 404 -
+ * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
+Trying to connect to host: localhost
+Connected to host: localhost
+Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
+Topic: heart_rate
+Payload: {"timestamp": 1741502526.6216993, "value": 79.52}
+Parsed Payload:
+{
+  "timestamp": 1741502526.6216993,
+  "value": 79.52
+}
+Sending message to RabbitMQ...
+Successfully connected to RabbitMQ node: localhost
+Successfully connected to RabbitMQ node: localhost
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502526.6216993, 'value': 79.52}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502531.1682646, "value": 75.4}
+Parsed Payload:
+{
+  "timestamp": 1741502531.1682646,
+  "value": 75.4
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502531.1682646, 'value': 75.4}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502535.6995466, "value": 72.4}
+Parsed Payload:
+{
+  "timestamp": 1741502535.6995466,
+  "value": 72.4
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502535.6995466, 'value': 72.4}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502540.255072, "value": 75.64}
+Parsed Payload:
+{
+  "timestamp": 1741502540.255072,
+  "value": 75.64
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502540.255072, 'value': 75.64}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502544.8011243, "value": 79.52}
+Parsed Payload:
+{
+  "timestamp": 1741502544.8011243,
+  "value": 79.52
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502544.8011243, 'value': 79.52}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502549.3586435, "value": 71.0}
+Parsed Payload:
+{
+  "timestamp": 1741502549.3586435,
+  "value": 71.0
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502549.3586435, 'value': 71.0}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502553.9211884, "value": 72.02}
+Parsed Payload:
+{
+  "timestamp": 1741502553.9211884,
+  "value": 72.02
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502553.9211884, 'value': 72.02}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502558.4962566, "value": 70.98}
+Parsed Payload:
+{
+  "timestamp": 1741502558.4962566,
+  "value": 70.98
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502558.4962566, 'value': 70.98}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502563.049344, "value": 70.76}
+Parsed Payload:
+{
+  "timestamp": 1741502563.049344,
+  "value": 70.76
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502563.049344, 'value': 70.76}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502567.6065524, "value": 70.36}
+Parsed Payload:
+{
+  "timestamp": 1741502567.6065524,
+  "value": 70.36
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502567.6065524, 'value': 70.36}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502572.1793194, "value": 71.97}
+Parsed Payload:
+{
+  "timestamp": 1741502572.1793194,
+  "value": 71.97
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502572.1793194, 'value': 71.97}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502576.7900333, "value": 79.82}
+Parsed Payload:
+{
+  "timestamp": 1741502576.7900333,
+  "value": 79.82
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502576.7900333, 'value': 79.82}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502616.8493037, "value": 79.18}
+Parsed Payload:
+{
+  "timestamp": 1741502616.8493037,
+  "value": 79.18
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502616.8493037, 'value': 79.18}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502621.4000223, "value": 75.32}
+Parsed Payload:
+{
+  "timestamp": 1741502621.4000223,
+  "value": 75.32
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502621.4000223, 'value': 75.32}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741502625.9344795, "value": 72.69}
+Parsed Payload:
+{
+  "timestamp": 1741502625.9344795,
+  "value": 72.69
+}
+Sending message to RabbitMQ...
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741502625.9344795, 'value': 72.69}}
+Message sent successfully!
+Topic: data_type
+Payload: {'value': 'Heart Rate', 'category': 'Health', 'measurement': 'bpm'}
+Parsed Payload:
+{
+  "value": "Heart Rate",
+  "category": "Health",
+  "measurement": "bpm"
+}
+Sending message to RabbitMQ...
+Failed to send message to RabbitMQ: Stream connection lost: ConnectionResetError(104, 'Connection reset by peer')
+Connection is closed. Discarding it.
+Message sent successfully!
+Wallet ID: 0xfac5acde68b3a5a07f3b06ae78abaa078cf2fa2e
+Device IDs: ['Heart Rate']
+Wallet ID: 0xfac5acde68b3a5a07f3b06ae78abaa078cf2fa2e
+Device IDs: ['Blood Pressure']
+Topic: Heart Rate
+Payload: {'timestamp': 1741725325.0676804, 'value': 77.96}
+Parsed Payload:
+{
+  "timestamp": 1741725325.0676804,
+  "value": 77.96
+}
+Sending message to RabbitMQ...
+Failed to send message to RabbitMQ: Stream connection lost: ConnectionResetError(104, 'Connection reset by peer')
+Connection is closed. Discarding it.
+Message sent successfully!
+Topic: Heart Rate
+Payload: {'timestamp': 1741725334.684997, 'value': 73.6}
+Parsed Payload:
+{
+  "timestamp": 1741725334.684997,
+  "value": 73.6
+}
+Sending message to RabbitMQ...
+Topic: Heart Rate
+Payload: {'timestamp': 1741725400.4725573, 'value': 72.03}
+Parsed Payload:
+{
+  "timestamp": 1741725400.4725573,
+  "value": 72.03
+}
+Sending message to RabbitMQ...
+Topic: Heart Rate
+Payload: {'timestamp': 1741725485.6200233, 'value': 79.83}
+Parsed Payload:
+{
+  "timestamp": 1741725485.6200233,
+  "value": 79.83
+}
+Sending message to RabbitMQ...
+Topic: Heart Rate
+Payload: {'value': 70, 'timestamp': 1741711319}
+Parsed Payload:
+{
+  "value": 70,
+  "timestamp": 1741711319
+}
+Sending message to RabbitMQ...
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 459-411-025
+ * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
+Trying to connect to host: localhost
+Connected to host: localhost
+Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 459-411-025
+ * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
+Trying to connect to host: localhost
+Connected to host: localhost
+Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
+ * Restarting with stat
+  File "/home/sunlab/web3db_reloaded/backend.py", line 132
+    name = 
+           ^
+SyntaxError: invalid syntax
