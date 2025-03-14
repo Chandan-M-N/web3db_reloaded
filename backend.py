@@ -173,9 +173,12 @@ def subscribe_devices():
     if not data:
         return jsonify({"status": "error", "message": "No data provided in the request body"}), 400
     
+    device_owner = data.get("owner_id",None)
     subscriber_eth_address = data.get("subscriber_ID",None)  # Extract subscriber's Ethereum address
     subscribe_device_ids = data.get("device_id",None)  # Extract list of devices to be subscribed
 
+    if device_owner is None:
+        return jsonify({"status": "error", "message": "No owner_id provided in the request body"}), 400
     if subscriber_eth_address is None:
         return jsonify({"status": "error", "message": "No subscriber_ID provided in the request body"}), 400
     if subscribe_device_ids is None:
@@ -184,6 +187,12 @@ def subscribe_devices():
     print(f"Subscriber Address: {subscriber_eth_address}")
     print(f"Devices to Subscribe: {subscribe_device_ids}")
 
+    owner_id = hash_wallet_id(device_owner)
+
+    row = db.check_device_exists(owner_id, subscribe_device_ids)
+    if row is False:
+        return jsonify({"message": "Device does not exist in owner's list"}), 400
+    
     subs_id = hash_wallet_id(subscriber_eth_address)
 
     #add policy to contract
@@ -197,59 +206,34 @@ def subscribe_devices():
     return jsonify({"status": "success","message":message}), 200
 
 
-@app.route('/access-device', methods=['POST'])
-def access_subs_device():
+@app.route('/evaluate-policy', methods=['POST'])
+def check_policy():
     data = request.get_json()  # Get JSON data from the request
     if not data:
         return jsonify({"status": "error", "message": "No data provided in the request body"}), 400
-
-    if 'time' in data and 'topic' in data and 'date' in data and 'wallet_id' in data:
-            time = data['time']
-            topic = data['topic']
-            date = data['date']
-            wallet_id = data['wallet_id']
-    else:
-        return jsonify({"status": "error", "message": "Request must contain 'time', 'topic', 'date' and 'wallet_id'"}), 400
-
-    subs_id = hash_wallet_id(wallet_id)
     
-    #check policy in contract
+    subscriber_eth_address = data.get("subscriber_wallet_id",None)  # Extract subscriber's Ethereum address
+    subscriber_device_id = data.get("device_id",None)  # Extract list of devices to be subscribed
+    
+    if subscriber_eth_address is None:
+        return jsonify({"status": "error", "message": "No subscriber_wallet_id provided in the request body"}), 400
+    if subscriber_device_id is None:
+        return jsonify({"status": "error", "message": "No device_id provided in the request body"}), 400
+
+    print(f"Subscriber Address: {subscriber_eth_address}")
+    print(f"Devices to Subscribe: {subscriber_device_id}")
+    
+    subs_id = hash_wallet_id(subscriber_eth_address)
+
+    #check policy
     if access_control is None:
         return jsonify({"message": "Failed to connect to Ethereum network"}), 200
     
-    message, op = access_control.evaluate_policy(subs_id)
+    op,message= access_control.evaluate_policy(subscriber_device_id,subs_id)
+
     if op is False:
-        return jsonify({"status": "Access denied","message":message}), 200
-
-    # Fetch CIDs for the given time period
-    hash_list,message = db.fetch_cids_by_time(date,time,topic)
-    if hash_list:
-        # Fetch files from IPFS and store them in dumps/{cid}.json
-        for cid in hash_list:
-            ipfs.fetch_file_from_ipfs_cluster(cid)
-        
-        # Read all JSON files from the dumps directory and merge their contents
-        merged_data = []
-        for cid in hash_list:
-            file_path = f"dumps/{cid}.json"
-            if os.path.exists(file_path):
-                try:
-                    # Read the file and add its contents to the list
-                    with open(file_path, 'r') as file:
-                        file_data = json.load(file)
-                        merged_data.append(file_data)
-                    
-                    # Remove the file after processing
-                    os.remove(file_path)
-                except Exception as e:
-                    print(f"Error processing or removing file {file_path}: {e}")
-                    continue
-
-        # Return the merged data as a JSON response
-        return jsonify({"data": merged_data}), 200
-    else:
-        # Return a response if no CIDs are found
-        return jsonify({"status": "success", "message": f"{message}"}), 200
+        return jsonify({"status": "Failed","message":message}), 403
+    return jsonify({"status": "success","message":message}), 200
 
 
 
@@ -268,6 +252,7 @@ def get_device_list():
 
     result = db.get_user_devices(hashed_wallet_id)
     return jsonify({"devices": result}), 200
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5100, debug=True)

@@ -202,10 +202,12 @@ class AccessControl:
             
             # Process events
             logs = self.contract.events.PolicyAdded().process_receipt(tx_receipt)
+            print(tx_receipt)
             if logs:
                 print(f"Policy added: {logs[0]['args']}")
-            
-            return True, tx_receipt
+                return True, "success"
+            else:
+                return False, "failed"
         
         except Exception as e:
             print(f"Failed to add policy {e}")
@@ -243,10 +245,14 @@ class AccessControl:
     
     def evaluate_policy(self, resource_id, requester_id):
         try:
-            return self.contract.functions.evaluatePolicy(resource_id, requester_id).call(), True
+            op = self.contract.functions.evaluatePolicy(resource_id, requester_id).call()
+            if op:
+                return True, "access granted"
+            else:
+                return False, "access denied"
         except Exception as e:
             print(e)
-            return e, False
+            return False, e
 
 
 # if __name__ == "__main__":

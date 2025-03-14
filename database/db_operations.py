@@ -295,3 +295,36 @@ def get_user_devices(wallet_id):
         if connection:
             cursor.close()
             connection_pool.putconn(connection)
+
+
+def check_device_exists(wallet_id, device_id):
+    """
+    Check if a specific wallet_id and device_id combination exists in the device_list table.
+    Returns True if the row exists, otherwise False.
+    """
+    connection = None
+    try:
+        # Prepare the select query
+        select_query = """
+        SELECT 1 
+        FROM device_list
+        WHERE hash_of_wallet_id = %s AND device_id = %s;
+        """
+
+        # Execute the query
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        cursor.execute(select_query, (wallet_id, device_id))
+        
+        # Fetch the result
+        result = cursor.fetchone()
+        
+        # If a row is found, return True; otherwise, return False
+        return result is not None
+    except Exception as e:
+        print(f"Error checking device existence: {e}")
+        return False
+    finally:
+        if connection:
+            cursor.close()
+            connection_pool.putconn(connection)
