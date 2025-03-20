@@ -2,7 +2,6 @@ import psycopg2
 from psycopg2 import pool
 import time
 from datetime import datetime
-import hashlib
 
 # Read hosts from hosts.txt
 def read_hosts(file_path):
@@ -208,12 +207,6 @@ def fetch_cids_by_time(date_str, time_str, topic):
             cursor.close()
             connection_pool.putconn(connection)
 
-# Hash wallet ID
-def hash_wallet_id(wallet_id):
-    """
-    Hash the wallet_id using SHA-256.
-    """
-    return hashlib.sha256(wallet_id.encode()).hexdigest()
 
 # Add device
 def add_device(wallet_id, device_ids, names, category_list, measurement_unit_list):
@@ -221,8 +214,6 @@ def add_device(wallet_id, device_ids, names, category_list, measurement_unit_lis
     Add a wallet_id (hashed) and associated device_ids to the device_list table.
     """
     try:
-        # Hash the wallet_id
-        hashed_wallet_id = hash_wallet_id(wallet_id)
 
         # Prepare the insert query
         insert_query = """
@@ -237,7 +228,7 @@ def add_device(wallet_id, device_ids, names, category_list, measurement_unit_lis
         # Loop through device_ids and insert them
         for x in range(len(device_ids)):
             # Execute the query
-            success = execute_query(insert_query, (hashed_wallet_id, device_ids[x], names[x], category_list[x], measurement_unit_list[x]))
+            success = execute_query(insert_query, (wallet_id, device_ids[x], names[x], category_list[x], measurement_unit_list[x]))
             if success:
                 inserted_device_ids.append((device_ids[x], names[x], category_list[x], measurement_unit_list[x]))
             else:
@@ -323,6 +314,115 @@ def check_device_exists(wallet_id, device_id):
         return result is not None
     except Exception as e:
         print(f"Error checking device existence: {e}")
+        return False
+    finally:
+        if connection:
+            cursor.close()
+            connection_pool.putconn(connection)
+
+
+def get_user_profile_by_wallet_id(wallet_id):
+    """
+    Fetch all user profile data for a given wallet_id.
+    """
+    connection = None
+    try:
+        # Prepare the select query
+        select_query = """
+        SELECT wallet_id, name, email, height, weight, age, gender, bmi
+        FROM user_profile
+        WHERE wallet_id = %s;
+        """
+
+        # Execute the query
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        cursor.execute(select_query, (wallet_id,))
+
+        # Fetch the result
+        result = cursor.fetchone()
+
+        if result:
+            # Convert the result to a dictionary
+            columns = [desc[0] for desc in cursor.description]  # Get column names
+            user_profile = dict(zip(columns, result))
+            return user_profile
+        else:
+            return None
+    except Exception as e:
+        print(f"Error fetching user profile: {e}")
+        return None
+    finally:
+        if connection:
+            cursor.close()
+            connection_pool.putconn(connection)
+
+
+
+def get_wallet_id_by_email(email):
+    """
+    Retrieve the wallet_id for a given email.
+    """
+    connection = None
+    try:
+        # Prepare the select query
+        select_query = """
+        SELECT wallet_id
+        FROM user_profile
+        WHERE email = %s;
+        """
+
+        # Execute the query
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        cursor.execute(select_query, (email,))
+
+        # Fetch the result
+        result = cursor.fetchone()
+
+        if result:
+            return result[0]  # Return the wallet_id
+        else:
+            return None
+    except Exception as e:
+        print(f"Error retrieving wallet_id: {e}")
+        return None
+    finally:
+        if connection:
+            cursor.close()
+            connection_pool.putconn(connection)
+
+
+def add_user_profile(wallet_id, name, email, height, weight, age, gender, bmi):
+    """
+    Add or update user profile data in the user_profile table.
+    """
+    connection = None
+    try:
+        # Prepare the insert/update query
+        insert_query = """
+        INSERT INTO user_profile (wallet_id, name, email, height, weight, age, gender, bmi)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        ON CONFLICT (wallet_id) DO UPDATE
+        SET name = EXCLUDED.name,
+            email = EXCLUDED.email,
+            height = EXCLUDED.height,
+            weight = EXCLUDED.weight,
+            age = EXCLUDED.age,
+            gender = EXCLUDED.gender,
+            bmi = EXCLUDED.bmi;
+        """
+
+        # Execute the query
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        cursor.execute(insert_query, (wallet_id, name, email, float(height), float(weight), int(age), gender, float(bmi)))
+        connection.commit()
+
+        # Return True if the query succeeds
+        return True
+    except Exception as e:
+        print(f"Error adding/updating user profile: {e}")
         return False
     finally:
         if connection:

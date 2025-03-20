@@ -1,7 +1,7 @@
 nohup: ignoring input
 Trying to connect to host: localhost
 Connected to host: localhost
-Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
+Connected with address: 0xB60f74C1EFe4fA3BD9838b4CEd6177843D67FbA4
  * Serving Flask app 'backend'
  * Debug mode: on
 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
@@ -11,1681 +11,175 @@ Error while setting up access control The private key must be exactly 32 bytes l
 [33mPress CTRL+C to quit[0m
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 521-861-280
-127.0.0.1 - - [13/Mar/2025 16:54:38] "POST /add-medical HTTP/1.1" 200 -
-127.0.0.1 - - [13/Mar/2025 16:54:42] "POST /add-medical HTTP/1.1" 200 -
-127.0.0.1 - - [13/Mar/2025 16:54:47] "POST /add-medical HTTP/1.1" 200 -
-127.0.0.1 - - [13/Mar/2025 16:54:51] "POST /add-medical HTTP/1.1" 200 -
-127.0.0.1 - - [13/Mar/2025 16:54:56] "POST /add-medical HTTP/1.1" 200 -
-127.0.0.1 - - [13/Mar/2025 16:55:00] "POST /add-medical HTTP/1.1" 200 -
-127.0.0.1 - - [13/Mar/2025 16:55:05] "POST /add-medical HTTP/1.1" 200 -
-127.0.0.1 - - [13/Mar/2025 16:55:09] "POST /add-medical HTTP/1.1" 200 -
-35.150.236.157 - - [13/Mar/2025 19:48:36] "POST /add-medical HTTP/1.1" 200 -
-35.150.236.157 - - [13/Mar/2025 19:48:39] "POST /add-medical HTTP/1.1" 200 -
-35.150.236.157 - - [13/Mar/2025 19:54:18] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:20] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:27] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:29] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:31] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:33] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:37] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:44] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:46] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:48] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:50] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:54:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:13] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:15] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:17] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:21] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:26] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:28] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:30] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:34] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 19:55:36] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
+ * Debugger PIN: 114-114-750
+127.0.0.1 - - [14/Mar/2025 14:11:39] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:11:44] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:11:49] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:11:53] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:11:58] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:03] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:07] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:12] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:16] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:21] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:26] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:31] "POST /add-medical HTTP/1.1" 200 -
+127.0.0.1 - - [14/Mar/2025 14:12:35] "POST /add-medical HTTP/1.1" 200 -
+198.137.18.28 - - [14/Mar/2025 14:36:47] "POST /add-device HTTP/1.1" 200 -
+45.142.193.246 - - [17/Mar/2025 03:18:58] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+45.142.193.246 - - [17/Mar/2025 03:18:58] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+194.180.48.85 - - [18/Mar/2025 09:54:56] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00')
+194.180.48.85 - - [18/Mar/2025 09:54:56] "[31m[1m\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00[0m" 400 -
+ * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
 Trying to connect to host: localhost
 Connected to host: localhost
-Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899278.0702012, "value": 70.65}
+Connected with address: 0xB60f74C1EFe4fA3BD9838b4CEd6177843D67FbA4
+Topic: heart_rate
+Payload: {"timestamp": 1741975900.003577, "value": 72.94}
 Parsed Payload:
 {
-  "timestamp": 1741899278.0702012,
-  "value": 70.65
+  "timestamp": 1741975900.003577,
+  "value": 72.94
 }
 Sending message to RabbitMQ...
 Successfully connected to RabbitMQ node: localhost
 Successfully connected to RabbitMQ node: localhost
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899278.0702012, 'value': 70.65}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975900.003577, 'value': 72.94}}
 Message sent successfully!
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899282.6340213, "value": 71.47}
+Topic: heart_rate
+Payload: {"timestamp": 1741975904.8981912, "value": 78.36}
 Parsed Payload:
 {
-  "timestamp": 1741899282.6340213,
-  "value": 71.47
+  "timestamp": 1741975904.8981912,
+  "value": 78.36
 }
 Sending message to RabbitMQ...
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899282.6340213, 'value': 71.47}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975904.8981912, 'value': 78.36}}
 Message sent successfully!
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899287.1848118, "value": 72.31}
+Topic: heart_rate
+Payload: {"timestamp": 1741975909.4978087, "value": 73.98}
 Parsed Payload:
 {
-  "timestamp": 1741899287.1848118,
-  "value": 72.31
+  "timestamp": 1741975909.4978087,
+  "value": 73.98
 }
 Sending message to RabbitMQ...
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899287.1848118, 'value': 72.31}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975909.4978087, 'value': 73.98}}
 Message sent successfully!
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899291.7325413, "value": 74.39}
+Topic: heart_rate
+Payload: {"timestamp": 1741975914.073845, "value": 79.63}
 Parsed Payload:
 {
-  "timestamp": 1741899291.7325413,
-  "value": 74.39
+  "timestamp": 1741975914.073845,
+  "value": 79.63
 }
 Sending message to RabbitMQ...
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899291.7325413, 'value': 74.39}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975914.073845, 'value': 79.63}}
 Message sent successfully!
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899296.2944946, "value": 70.32}
+Topic: heart_rate
+Payload: {"timestamp": 1741975918.7074726, "value": 71.52}
 Parsed Payload:
 {
-  "timestamp": 1741899296.2944946,
-  "value": 70.32
+  "timestamp": 1741975918.7074726,
+  "value": 71.52
 }
 Sending message to RabbitMQ...
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899296.2944946, 'value': 70.32}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975918.7074726, 'value': 71.52}}
 Message sent successfully!
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899300.850699, "value": 73.07}
+Topic: heart_rate
+Payload: {"timestamp": 1741975923.3046687, "value": 70.27}
 Parsed Payload:
 {
-  "timestamp": 1741899300.850699,
-  "value": 73.07
+  "timestamp": 1741975923.3046687,
+  "value": 70.27
 }
 Sending message to RabbitMQ...
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899300.850699, 'value': 73.07}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975923.3046687, 'value': 70.27}}
 Message sent successfully!
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899305.3890038, "value": 73.53}
+Topic: heart_rate
+Payload: {"timestamp": 1741975927.9603055, "value": 70.69}
 Parsed Payload:
 {
-  "timestamp": 1741899305.3890038,
-  "value": 73.53
+  "timestamp": 1741975927.9603055,
+  "value": 70.69
 }
 Sending message to RabbitMQ...
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899305.3890038, 'value': 73.53}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975927.9603055, 'value': 70.69}}
 Message sent successfully!
-Topic: topic/heart_rate/hj:45:65:75
-Payload: {"timestamp": 1741899309.942926, "value": 78.25}
+Topic: heart_rate
+Payload: {"timestamp": 1741975932.6060507, "value": 73.19}
 Parsed Payload:
 {
-  "timestamp": 1741899309.942926,
-  "value": 78.25
+  "timestamp": 1741975932.6060507,
+  "value": 73.19
 }
 Sending message to RabbitMQ...
- [x] Sent to RabbitMQ: {'topic': 'topic/heart_rate/hj:45:65:75', 'payload': {'timestamp': 1741899309.942926, 'value': 78.25}}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975932.6060507, 'value': 73.19}}
 Message sent successfully!
-Topic: None
-Payload: None
+Topic: heart_rate
+Payload: {"timestamp": 1741975937.2854803, "value": 78.47}
 Parsed Payload:
-null
+{
+  "timestamp": 1741975937.2854803,
+  "value": 78.47
+}
 Sending message to RabbitMQ...
-Failed to send message to RabbitMQ: Stream connection lost: ConnectionResetError(104, 'Connection reset by peer')
-Connection is closed. Discarding it.
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975937.2854803, 'value': 78.47}}
 Message sent successfully!
-Topic: None
-Payload: None
+Topic: heart_rate
+Payload: {"timestamp": 1741975941.965702, "value": 79.55}
 Parsed Payload:
-null
+{
+  "timestamp": 1741975941.965702,
+  "value": 79.55
+}
 Sending message to RabbitMQ...
-Failed to send message to RabbitMQ: Stream connection lost: ConnectionResetError(104, 'Connection reset by peer')
-Connection is closed. Discarding it.
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975941.965702, 'value': 79.55}}
 Message sent successfully!
-Topic: None
-Payload: None
-Parsed Payload:
-null
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910170.7182097, "value": 78.64}
+Topic: heart_rate
+Payload: {"timestamp": 1741975946.6850843, "value": 74.67}
 Parsed Payload:
 {
-  "type": "heart_rate",
-  "timestamp": 1741910170.7182097,
-  "value": 78.64
+  "timestamp": 1741975946.6850843,
+  "value": 74.67
 }
 Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910175.2502868, "value": 70.8}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975946.6850843, 'value': 74.67}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741975951.51271, "value": 72.65}
 Parsed Payload:
 {
-  "type": "heart_rate",
-  "timestamp": 1741910175.2502868,
-  "value": 70.8
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910179.7858577, "value": 71.78}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910179.7858577,
-  "value": 71.78
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910184.323563, "value": 78.7}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910184.323563,
-  "value": 78.7
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910193.4691093, "value": 79.88}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910193.4691093,
-  "value": 79.88
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910217.9772155, "value": 78.58}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910217.9772155,
-  "value": 78.58
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910222.5528417, "value": 75.39}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910222.5528417,
-  "value": 75.39
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910175.2502868, "value": 70.8}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910175.2502868,
-  "value": 70.8
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910198.0330443, "value": 72.81}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910198.0330443,
-  "value": 72.81
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910272.8611243, "value": 79.4}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910272.8611243,
-  "value": 79.4
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910277.4291978, "value": 76.96}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910277.4291978,
-  "value": 76.96
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910236.2615273, "value": 73.83}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910236.2615273,
-  "value": 73.83
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910295.7426586, "value": 79.74}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910295.7426586,
-  "value": 79.74
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910323.2532692, "value": 75.65}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910323.2532692,
-  "value": 75.65
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910346.1037126, "value": 76.8}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910346.1037126,
-  "value": 76.8
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910364.3963156, "value": 73.9}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910364.3963156,
-  "value": 73.9
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910405.531433, "value": 70.59}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910405.531433,
-  "value": 70.59
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910410.1229308, "value": 70.84}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910410.1229308,
-  "value": 70.84
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910282.0029275, "value": 79.68}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910282.0029275,
-  "value": 79.68
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910188.8838754, "value": 70.51}
-35.150.236.157 - - [13/Mar/2025 20:08:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:51] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:53] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:55] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:08:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:04] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:06] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:08] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:10] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:12] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:14] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:21] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:09:27] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:29] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:31] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:33] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:37] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:50] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:13:50] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:13:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:13:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910188.8838754,
-  "value": 70.51
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910419.2547784, "value": 73.03}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910419.2547784,
-  "value": 73.03
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910437.518425, "value": 79.15}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910437.518425,
-  "value": 79.15
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910501.873051, "value": 73.2}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910501.873051,
-  "value": 73.2
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910529.3570786, "value": 74.21}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910529.3570786,
-  "value": 74.21
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910314.1079147, "value": 78.62}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910314.1079147,
-  "value": 78.62
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910323.2532692, "value": 75.65}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910323.2532692,
-  "value": 75.65
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910511.0900586, "value": 75.13}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910511.0900586,
-  "value": 75.13
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910460.4189935, "value": 70.23}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910460.4189935,
-  "value": 70.23
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910350.694404, "value": 75.26}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910350.694404,
-  "value": 75.26
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910575.0777252, "value": 71.66}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910575.0777252,
-  "value": 71.66
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910597.984062, "value": 72.45}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910597.984062,
-  "value": 72.45
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910639.1594841, "value": 76.11}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910639.1594841,
-  "value": 76.11
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910739.7357702, "value": 70.78}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910739.7357702,
-  "value": 70.78
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910488.0689585, "value": 76.73}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910488.0689585,
-  "value": 76.73
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910469.5541565, "value": 71.37}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910469.5541565,
-  "value": 71.37
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910602.5566695, "value": 76.97}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910602.5566695,
-  "value": 76.97
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910748.87753, "value": 72.65}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910748.87753,
+  "timestamp": 1741975951.51271,
   "value": 72.65
 }
 Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910547.6154013, "value": 73.55}
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975951.51271, 'value': 72.65}}
+Message sent successfully!
+Topic: heart_rate
+Payload: {"timestamp": 1741975956.2400174, "value": 72.02}
 Parsed Payload:
 {
-  "type": "heart_rate",
-  "timestamp": 1741910547.6154013,
-  "value": 73.55
+  "timestamp": 1741975956.2400174,
+  "value": 72.02
 }
 Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910639.1594841, "value": 76.11}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910639.1594841,
-  "value": 76.11
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910616.2845826, "value": 78.56}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910616.2845826,
-  "value": 78.56
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910726.022655, "value": 79.35}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910726.022655,
-  "value": 79.35
-}
-Sending message to RabbitMQ...
-Topic: None
-Payload: None
-Parsed Payload:
-null
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910748.87753, "value": 72.65}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910748.87753,
-  "value": 72.65
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910703.1169302, "value": 74.65}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910703.1169302,
-  "value": 74.65
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910744.2789905, "value": 70.17}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910744.2789905,
-  "value": 70.17
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910469.5541565, "value": 71.37}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910469.5541565,
-  "value": 71.37
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910620.8575823, "value": 73.17}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910620.8575823,
-  "value": 73.17
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910698.564762, "value": 76.23}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910698.564762,
-  "value": 76.23
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910735.1507423, "value": 70.93}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910735.1507423,
-  "value": 70.93
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910739.7357702, "value": 70.78}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910739.7357702,
-  "value": 70.78
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910648.2764544, "value": 73.73}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910648.2764544,
-  "value": 73.73
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910689.4071324, "value": 74.89}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910689.4071324,
-  "value": 74.89
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910666.599859, "value": 73.61}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910666.599859,
-  "value": 73.61
-}
-Sending message to RabbitMQ...
-Topic: sensor/heart_rate
-Payload: {"type": "heart_rate", "timestamp": 1741910662.051421, "value": 76.59}
-Parsed Payload:
-{
-  "type": "heart_rate",
-  "timestamp": 1741910662.051421,
-  "value": 76.59
-}
-Sending message to RabbitMQ...
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911227000000000; heartrate=122.18649517684887; respiratoryrate=9.884678747940692; systolic=115.56244; diastolic=67.26494; timestamp=1741911227000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-127.0.0.1 - - [13/Mar/2025 20:13:54] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:13:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:13:58] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:13:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:00] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:04] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:06] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:08] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:09] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:10] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:13] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:13] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:15] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:16] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:17] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:19] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:21] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:21] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:27] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:29] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:29] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:31] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:34] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:34] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:36] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:38] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:40] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:41] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:42] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:44] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:44] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:46] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:47] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:49] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:51] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:51] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:53] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:53] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:55] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:14:57] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:14:57] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:14:59] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:01] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:03] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:10] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:12] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:14] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:15:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:18:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:04] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:06] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:08] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:13] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:15] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:17] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:21] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:27] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:29] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:34] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:36] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:38] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:40] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:42] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:44] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:46] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:48] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:51] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:53] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:55] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:57] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:19:59] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:01] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:03] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:14] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:18] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:20] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:22] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:24] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:26] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:28] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:30] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:33] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:37] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:51] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:53] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:20:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:04] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:06] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:08] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:10] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:12] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:14] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:21] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:27] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:29] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:31] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:33] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:38] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:40] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:42] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:44] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:46] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:48] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:50] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:21:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:03] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:13] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911231000000000; heartrate=120.2672605790646; respiratoryrate=8.04289544235925; systolic=115.990555; diastolic=67.614365; timestamp=1741911231000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911234000000000; heartrate=120.42502951593862; respiratoryrate=10.771992818671453; systolic=114.87629; diastolic=67.38083; timestamp=1741911234000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911235000000000; heartrate=119.57796014067995; respiratoryrate=10.273972602739725; systolic=115.89871; diastolic=67.41598; timestamp=1741911235000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911245000000000; heartrate=121.21212121212122; respiratoryrate=32.608695652173914; systolic=116.46773; diastolic=67.76117; timestamp=1741911245000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911249000000000; heartrate=119.46902654867257; respiratoryrate=13.66742596810934; systolic=115.8444; diastolic=67.456085; timestamp=1741911249000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911252000000000; heartrate=118.42105263157896; respiratoryrate=9.25925925925926; systolic=116.88434; diastolic=68.034706; timestamp=1741911252000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911256000000000; heartrate=119.07386990077178; respiratoryrate=14.117647058823529; systolic=116.299835; diastolic=67.77879; timestamp=1741911256000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911257000000000; heartrate=119.43793911007026; respiratoryrate=15.07537688442211; systolic=116.79443; diastolic=67.58365; timestamp=1741911257000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911266000000000; heartrate=121.48481439820023; respiratoryrate=9.25925925925926; systolic=116.75651; diastolic=67.91804; timestamp=1741911266000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911267000000000; heartrate=121.48481439820023; respiratoryrate=14.563106796116505; systolic=116.12144; diastolic=67.781006; timestamp=1741911267000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911271000000000; heartrate=119.60132890365449; respiratoryrate=9.244992295839753; systolic=117.09852; diastolic=67.91948; timestamp=1741911271000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911278000000000; heartrate=119.33701657458563; respiratoryrate=9.46372239747634; systolic=116.59115; diastolic=67.6015; timestamp=1741911278000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911281000000000; heartrate=120.40133779264214; respiratoryrate=19.047619047619047; systolic=115.86052; diastolic=67.31499; timestamp=1741911281000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911282000000000; heartrate=121.34831460674158; respiratoryrate=9.104704097116844; systolic=117.16878; diastolic=67.58099; timestamp=1741911282000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911285000000000; heartrate=120.0; respiratoryrate=14.117647058823529; systolic=116.7269; diastolic=68.00885; timestamp=1741911285000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911286000000000; heartrate=120.28301886792453; respiratoryrate=8.174386920980927; systolic=116.33403; diastolic=67.39288; timestamp=1741911286000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911289000000000; heartrate=120.94064949608062; respiratoryrate=10.90909090909091; systolic=116.23243; diastolic=67.61185; timestamp=1741911289000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741911293000000000; heartrate=121.0762331838565; respiratoryrate=8.486562942008486; systolic=116.008545; diastolic=67.22893; timestamp=1741911293000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: None
-Payload: None
-Parsed Payload:
-null
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911651.1484165, "temp": 20.39, "humidity": 50.45}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911651.1484165,
-  "temp": 20.39,
-  "humidity": 50.45
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911655.69121, "temp": 29.94, "humidity": 58.49}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911655.69121,
-  "temp": 29.94,
-  "humidity": 58.49
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911660.2515335, "temp": 28.15, "humidity": 56.36}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911660.2515335,
-  "temp": 28.15,
-  "humidity": 56.36
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911664.7840407, "temp": 21.35, "humidity": 52.81}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911664.7840407,
-  "temp": 21.35,
-  "humidity": 52.81
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911669.3458805, "temp": 25.2, "humidity": 56.13}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911669.3458805,
-  "temp": 25.2,
-  "humidity": 56.13
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911682.996934, "temp": 26.36, "humidity": 51.65}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911682.996934,
-  "temp": 26.36,
-  "humidity": 51.65
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911687.5563195, "temp": 20.3, "humidity": 59.24}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911687.5563195,
-  "temp": 20.3,
-  "humidity": 59.24
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911696.6943288, "temp": 29.38, "humidity": 56.26}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911696.6943288,
-  "temp": 29.38,
-  "humidity": 56.26
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911714.9409492, "temp": 26.96, "humidity": 59.19}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911714.9409492,
-  "temp": 26.96,
-  "humidity": 59.19
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911733.1706922, "temp": 20.19, "humidity": 57.54}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911733.1706922,
-  "temp": 20.19,
-  "humidity": 57.54
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-35.150.236.157 - - [13/Mar/2025 20:22:15] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:17] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:22] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:24] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:26] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:28] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:30] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:34] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:36] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:38] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:40] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:42] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:51] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:53] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:55] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:57] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:22:59] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:04] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:06] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:08] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:10] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:12] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:14] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:18] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:20] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:22] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:27] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:29] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:31] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:33] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:37] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:46] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:48] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:50] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:23:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:04] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:06] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:13] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:15] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:17] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:21] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:27] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:29] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:34] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:36] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:38] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:40] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:42] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:44] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:46] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:48] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:50] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:55] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:57] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:24:59] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:01] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:03] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:14] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:18] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:20] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:22] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:24] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:26] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:28] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:30] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:37] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:25:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:03] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:13] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:18] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:20] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:22] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:24] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:26] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:28] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:30] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:37] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:26:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-Payload: {"type": "temperature", "timestamp": 1741911687.5563195, "temp": 20.3, "humidity": 59.24}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911687.5563195,
-  "temp": 20.3,
-  "humidity": 59.24
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911746.912053, "temp": 20.73, "humidity": 53.41}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911746.912053,
-  "temp": 20.73,
-  "humidity": 53.41
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911792.714629, "temp": 24.13, "humidity": 54.4}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911792.714629,
-  "temp": 24.13,
-  "humidity": 54.4
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911811.310017, "temp": 24.88, "humidity": 59.81}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911811.310017,
-  "temp": 24.88,
-  "humidity": 59.81
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911737.7334726, "temp": 26.35, "humidity": 59.38}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911737.7334726,
-  "temp": 26.35,
-  "humidity": 59.38
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911692.1191158, "temp": 25.12, "humidity": 55.95}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911692.1191158,
-  "temp": 25.12,
-  "humidity": 55.95
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911696.6943288, "temp": 29.38, "humidity": 56.26}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911696.6943288,
-  "temp": 29.38,
-  "humidity": 56.26
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911884.690318, "temp": 22.92, "humidity": 59.24}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911884.690318,
-  "temp": 22.92,
-  "humidity": 59.24
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911765.2043266, "temp": 20.28, "humidity": 52.41}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911765.2043266,
-  "temp": 20.28,
-  "humidity": 52.41
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911742.3465807, "temp": 27.14, "humidity": 51.76}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911742.3465807,
-  "temp": 27.14,
-  "humidity": 51.76
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911870.9728942, "temp": 28.96, "humidity": 51.83}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911870.9728942,
-  "temp": 28.96,
-  "humidity": 51.83
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911962.6381536, "temp": 28.32, "humidity": 58.27}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911962.6381536,
-  "temp": 28.32,
-  "humidity": 58.27
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911967.2175624, "temp": 23.77, "humidity": 59.8}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911967.2175624,
-  "temp": 23.77,
-  "humidity": 59.8
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911990.101675, "temp": 23.85, "humidity": 55.53}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911990.101675,
-  "temp": 23.85,
-  "humidity": 55.53
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911930.5582218, "temp": 24.79, "humidity": 57.99}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911930.5582218,
-  "temp": 24.79,
-  "humidity": 57.99
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911774.3819048, "temp": 21.36, "humidity": 58.47}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911774.3819048,
-  "temp": 21.36,
-  "humidity": 58.47
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911737.7334726, "temp": 26.35, "humidity": 59.38}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911737.7334726,
-  "temp": 26.35,
-  "humidity": 59.38
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911783.4967465, "temp": 25.05, "humidity": 58.2}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911783.4967465,
-  "temp": 25.05,
-  "humidity": 58.2
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911806.6479814, "temp": 20.19, "humidity": 55.31}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911806.6479814,
-  "temp": 20.19,
-  "humidity": 55.31
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911935.1509466, "temp": 25.24, "humidity": 58.01}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911935.1509466,
-  "temp": 25.24,
-  "humidity": 58.01
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911660.2515335, "temp": 28.15, "humidity": 56.36}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911660.2515335,
-  "temp": 28.15,
-  "humidity": 56.36
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911912.2968862, "temp": 25.16, "humidity": 52.51}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911912.2968862,
-  "temp": 25.16,
-  "humidity": 52.51
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911655.69121, "temp": 29.94, "humidity": 58.49}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911655.69121,
-  "temp": 29.94,
-  "humidity": 58.49
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911788.1446857, "temp": 23.08, "humidity": 53.04}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911788.1446857,
-  "temp": 23.08,
-  "humidity": 53.04
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911724.0786185, "temp": 28.63, "humidity": 58.24}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911724.0786185,
-  "temp": 28.63,
-  "humidity": 58.24
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911838.8973248, "temp": 27.47, "humidity": 57.22}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911838.8973248,
-  "temp": 27.47,
-  "humidity": 57.22
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911958.0390751, "temp": 20.53, "humidity": 50.31}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911958.0390751,
-  "temp": 20.53,
-  "humidity": 50.31
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911926.0030205, "temp": 21.09, "humidity": 56.41}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911926.0030205,
-  "temp": 21.09,
-  "humidity": 56.41
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911912.2968862, "temp": 25.16, "humidity": 52.51}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911912.2968862,
-  "temp": 25.16,
-  "humidity": 52.51
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911921.4202654, "temp": 29.39, "humidity": 51.28}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911921.4202654,
-  "temp": 29.39,
-  "humidity": 51.28
-}
-Sending message to RabbitMQ...
-35.150.236.157 - - [13/Mar/2025 20:29:48] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:29:50] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:29:52] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:29:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:29:56] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:29:58] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:00] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:02] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:11] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:13] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:15] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:17] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:19] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:21] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:23] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:23] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:25] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:25] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:28] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:28] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:30] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:32] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:30:34] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:34] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:36] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:37] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:38] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:39] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:40] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:41] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:42] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:43] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:44] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:45] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:46] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:48] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:50] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:51] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:52] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:53] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:54] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:55] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:56] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:57] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:30:59] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:30:59] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:01] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:03] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:05] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:07] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:09] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:09] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:11] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:12] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:14] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:14] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:16] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:16] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:18] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:18] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:20] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:20] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:22] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:22] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:24] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:25] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:26] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:28] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:31] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:33] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911980.9589994, "temp": 20.89, "humidity": 58.66}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911980.9589994,
-  "temp": 20.89,
-  "humidity": 58.66
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911948.9273183, "temp": 29.54, "humidity": 58.49}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911948.9273183,
-  "temp": 29.54,
-  "humidity": 58.49
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911990.101675, "temp": 23.85, "humidity": 55.53}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911990.101675,
-  "temp": 23.85,
-  "humidity": 55.53
-}
-Sending message to RabbitMQ...
-Topic: sensor/temperature
-Payload: {"type": "temperature", "timestamp": 1741911788.1446857, "temp": 23.08, "humidity": 53.04}
-Parsed Payload:
-{
-  "type": "temperature",
-  "timestamp": 1741911788.1446857,
-  "temp": 23.08,
-  "humidity": 53.04
-}
-Sending message to RabbitMQ...
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912220000000000; heartrate=118.88111888111888; respiratoryrate=8.450704225352114; systolic=116.35066; diastolic=67.635086; timestamp=1741912220000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912221000000000; heartrate=117.6470588235294; respiratoryrate=12.244897959183673; systolic=116.37279; diastolic=67.46373; timestamp=1741912221000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912222000000000; heartrate=117.6470588235294; respiratoryrate=10.810810810810812; systolic=117.35582; diastolic=67.589005; timestamp=1741912222000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912231000000000; heartrate=117.51152073732717; respiratoryrate=10.526315789473683; systolic=117.24356; diastolic=68.20151; timestamp=1741912231000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912232000000000; heartrate=117.6470588235294; respiratoryrate=8.534850640113797; systolic=117.2701; diastolic=67.787796; timestamp=1741912232000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912233000000000; heartrate=118.55104281009878; respiratoryrate=8.633093525179856; systolic=116.45241; diastolic=67.74832; timestamp=1741912233000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912234000000000; heartrate=118.29134720700986; respiratoryrate=8.784773060029282; systolic=116.36751; diastolic=67.78947; timestamp=1741912234000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912235000000000; heartrate=117.51904243743199; respiratoryrate=8.60832137733142; systolic=116.42866; diastolic=67.4756; timestamp=1741912235000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912236000000000; heartrate=116.88311688311688; respiratoryrate=8.438818565400844; systolic=116.3641; diastolic=67.73283; timestamp=1741912236000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912237000000000; heartrate=117.10677382319173; respiratoryrate=8.486562942008486; systolic=115.7034; diastolic=67.4905; timestamp=1741912237000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912246000000000; heartrate=116.57142857142857; respiratoryrate=8.65800865800866; systolic=116.59818; diastolic=67.953354; timestamp=1741912246000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912247000000000; heartrate=116.43835616438356; respiratoryrate=8.836524300441827; systolic=115.743614; diastolic=67.643326; timestamp=1741912247000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912248000000000; heartrate=116.57142857142857; respiratoryrate=8.65800865800866; systolic=116.574104; diastolic=67.89431; timestamp=1741912248000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912250000000000; heartrate=118.29134720700986; respiratoryrate=8.60832137733142; systolic=116.21749; diastolic=67.406815; timestamp=1741912250000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912251000000000; heartrate=116.83848797250859; respiratoryrate=8.559201141226819; systolic=116.74473; diastolic=68.00846; timestamp=1741912251000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912266000000000; heartrate=105.26315789473684; respiratoryrate=8.310249307479225; systolic=116.44553; diastolic=67.70682; timestamp=1741912266000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912267000000000; heartrate=105.49450549450549; respiratoryrate=8.021390374331549; systolic=115.64705; diastolic=67.70246; timestamp=1741912267000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912268000000000; heartrate=118.32946635730859; respiratoryrate=10.830324909747294; systolic=116.437675; diastolic=67.845024; timestamp=1741912268000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912269000000000; heartrate=119.07386990077178; respiratoryrate=8.174386920980927; systolic=116.4496; diastolic=67.74091; timestamp=1741912269000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912271000000000; heartrate=117.6470588235294; respiratoryrate=8.683068017366136; systolic=116.907814; diastolic=68.18393; timestamp=1741912271000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912272000000000; heartrate=118.94273127753304; respiratoryrate=8.415147265077138; systolic=116.54493; diastolic=67.796715; timestamp=1741912272000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912273000000000; heartrate=120.53571428571428; respiratoryrate=8.403361344537815; systolic=115.49999; diastolic=67.78304; timestamp=1741912273000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912280000000000; heartrate=120.13348164627364; respiratoryrate=8.415147265077138; systolic=116.442986; diastolic=68.001625; timestamp=1741912280000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912290000000000; heartrate=120.2672605790646; respiratoryrate=9.983361064891849; systolic=115.32914; diastolic=67.55262; timestamp=1741912290000000000; occupancy=1
-127.0.0.1 - - [13/Mar/2025 20:31:34] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:35] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:36] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:37] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:39] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:39] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:41] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:41] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:43] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:43] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:45] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:45] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:47] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:48] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:49] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-127.0.0.1 - - [13/Mar/2025 20:31:50] "[31m[1mPOST /add-medical HTTP/1.1[0m" 400 -
-35.150.236.157 - - [13/Mar/2025 20:31:51] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
-35.150.236.157 - - [13/Mar/2025 20:31:54] "[33mPOST /fetch-medical HTTP/1.1[0m" 404 -
- * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912291000000000; heartrate=119.73392461197338; respiratoryrate=8.438818565400844; systolic=116.44896; diastolic=67.83766; timestamp=1741912291000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912295000000000; heartrate=120.2672605790646; respiratoryrate=8.670520231213873; systolic=116.29741; diastolic=67.46899; timestamp=1741912295000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912296000000000; heartrate=120.67039106145252; respiratoryrate=13.636363636363637; systolic=116.18193; diastolic=67.48098; timestamp=1741912296000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912297000000000; heartrate=119.29824561403508; respiratoryrate=21.126760563380284; systolic=115.50535; diastolic=67.42325; timestamp=1741912297000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912298000000000; heartrate=120.53571428571428; respiratoryrate=8.108108108108107; systolic=116.80702; diastolic=67.61696; timestamp=1741912298000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912300000000000; heartrate=120.13348164627364; respiratoryrate=8.645533141210375; systolic=116.47987; diastolic=67.82209; timestamp=1741912300000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
-Topic: /unknown_org/74:4d:bd:89:2d:f4/vital
-Payload: timestamp=1741912301000000000; heartrate=120.94064949608062; respiratoryrate=9.74025974025974; systolic=116.33686; diastolic=67.7379; timestamp=1741912301000000000; occupancy=1
-Error parsing payload: Expecting value: line 1 column 1 (char 0)
+ [x] Sent to RabbitMQ: {'topic': 'heart_rate', 'payload': {'timestamp': 1741975956.2400174, 'value': 72.02}}
+Message sent successfully!
+Wallet ID: 456789
+Device IDs: ['topic/456789']
+Categories: ['1']
+Measurement Units: ['bpm']
+Names: ['xyz']
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 521-861-280
+ * Debugger PIN: 114-114-750
  * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
 Trying to connect to host: localhost
 Connected to host: localhost
-Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
+Connected with address: 0xB60f74C1EFe4fA3BD9838b4CEd6177843D67FbA4
  * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 521-861-280
- * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
-Trying to connect to host: localhost
-Connected to host: localhost
-Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 521-861-280
- * Detected change in '/home/sunlab/web3db_reloaded/backend.py', reloading
-Trying to connect to host: localhost
-Connected to host: localhost
-Error while setting up access control The private key must be exactly 32 bytes long, instead of 0 bytes.
- * Restarting with stat
-  File "/home/sunlab/web3db_reloaded/backend.py", line 176
-    device_owner =
-                  ^
+  File "/home/sunlab/web3db_reloaded/backend.py", line 256
+    @
+     ^
 SyntaxError: invalid syntax

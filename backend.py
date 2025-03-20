@@ -19,12 +19,6 @@ app = Flask(__name__)
 CORS(app)
 
 
-def hash_wallet_id(wallet_id):
-    """
-    Hash the wallet_id using SHA-256.
-    """
-    return hashlib.sha256(wallet_id.encode()).hexdigest()
-
 @app.route('/add-medical', methods=['POST'])
 def medical_data():
     try:
@@ -65,6 +59,7 @@ def medical_data():
     except Exception as e:
         print(f"Error in medical_data: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
+
 
 @app.route('/get-medical', methods=['POST'])
 def get_medical_data():
@@ -167,39 +162,40 @@ def devices():
     return jsonify(output), 200
 
 
-@app.route('/subscribe-device', methods=['POST'])
+@app.route('/share-access', methods=['POST'])
 def subscribe_devices():
     data = request.get_json()  # Get JSON data from the request
     if not data:
         return jsonify({"status": "error", "message": "No data provided in the request body"}), 400
     
     device_owner = data.get("owner_id",None)
-    subscriber_eth_address = data.get("subscriber_ID",None)  # Extract subscriber's Ethereum address
+    subscriber_email = data.get("subscriber_email",None)  # Extract subscriber's Ethereum address
     subscribe_device_ids = data.get("device_id",None)  # Extract list of devices to be subscribed
 
     if device_owner is None:
         return jsonify({"status": "error", "message": "No owner_id provided in the request body"}), 400
-    if subscriber_eth_address is None:
-        return jsonify({"status": "error", "message": "No subscriber_ID provided in the request body"}), 400
+    if subscriber_email is None:
+        return jsonify({"status": "error", "message": "No subscriber_email provided in the request body"}), 400
     if subscribe_device_ids is None:
         return jsonify({"status": "error", "message": "No device_id provided in the request body"}), 400
 
-    print(f"Subscriber Address: {subscriber_eth_address}")
+    print(f"Subscriber Address: {subscriber_email}")
     print(f"Devices to Subscribe: {subscribe_device_ids}")
 
-    owner_id = hash_wallet_id(device_owner)
 
-    row = db.check_device_exists(owner_id, subscribe_device_ids)
+    row = db.check_device_exists(device_owner, subscribe_device_ids)
     if row is False:
         return jsonify({"message": "Device does not exist in owner's list"}), 400
     
-    subs_id = hash_wallet_id(subscriber_eth_address)
+    wallet_id = db.get_wallet_id_by_email(subscriber_email)
+    if wallet_id is None:
+        return jsonify({"message": "No data found for given email"}), 200
 
     #add policy to contract
     if access_control is None:
         return jsonify({"message": "Failed to connect to Ethereum network"}), 200
-    
-    op,message = access_control.add_policy(subscribe_device_ids,subs_id)
+
+    op,message = access_control.add_policy(subscribe_device_ids,wallet_id)
 
     if op is False:
         return jsonify({"status": "Failed","message":message}), 200
@@ -223,13 +219,11 @@ def check_policy():
     print(f"Subscriber Address: {subscriber_eth_address}")
     print(f"Devices to Subscribe: {subscriber_device_id}")
     
-    subs_id = hash_wallet_id(subscriber_eth_address)
-
     #check policy
     if access_control is None:
         return jsonify({"message": "Failed to connect to Ethereum network"}), 200
     
-    op,message= access_control.evaluate_policy(subscriber_device_id,subs_id)
+    op,message= access_control.evaluate_policy(subscriber_device_id,subscriber_eth_address)
 
     if op is False:
         return jsonify({"status": "Failed","message":message}), 403
@@ -248,10 +242,55 @@ def get_device_list():
     
     wallet_id = data['wallet_id']
 
-    hashed_wallet_id = hash_wallet_id(wallet_id)
-
-    result = db.get_user_devices(hashed_wallet_id)
+    result = db.get_user_devices(wallet_id)
     return jsonify({"devices": result}), 200
+
+
+@app.route('/add-profile', methods=['POST'])
+def profile():
+    try:
+        # Get JSON data from the request
+        data = request.get_json()
+
+        # Check if all required fields are present
+        required_fields = ['wallet_id', 'name', 'email', 'height', 'weight', 'age', 'gender', 'bmi']
+        for field in required_fields:
+            if field not in data:
+                return jsonify({"error": f"Missing required field: {field}"}), 400
+
+        # Extract data from JSON
+        wallet_id = data['wallet_id']
+        name = data['name']
+        email = data['email']
+        height = data['height']
+        weight = data['weight']
+        age = data['age']
+        gender = data['gender']
+        bmi = data['bmi']
+
+        op = db.add_user_profile(wallet_id,name,email,height,weight,age,gender,bmi)
+        if op:
+            return jsonify({"message": "success"}), 200
+        return jsonify({"message": "failed"}), 500
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/get-profile',methods=['POST'])
+def fetch_profile():
+    data = request.get_json()
+    if 'wallet_id' not in data:
+        return jsonify({"error": f"Missing required field wallet_id"}), 400
+    
+    wallet_id = data['wallet_id']
+
+    op = db.get_user_profile_by_wallet_id(wallet_id)
+
+    if op is None:
+        return jsonify({"message": "No data found"}), 200
+    return jsonify(op),200
+
 
 
 if __name__ == '__main__':
