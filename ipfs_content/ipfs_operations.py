@@ -1,70 +1,69 @@
 import requests
 
-def add_file_with_metadata(file_path, cluster_host="localhost", cluster_port=9094):
+def add_file_with_metadata(encrypted_data: bytes, original_filename="data.bin", cluster_host="localhost", cluster_port=9094):
     """
-    Adds a file (including its name and metadata) to the IPFS cluster.
+    Adds encrypted data (bytes) to the IPFS cluster while preserving the original filename in metadata.
 
     Parameters:
-        file_path (str): The path to the file you want to upload.
+        encrypted_data (bytes): The encrypted data to upload.
+        original_filename (str): The original filename to preserve in metadata.
         cluster_host (str): The IPFS Cluster host (default is 'localhost').
         cluster_port (int): The IPFS Cluster port (default is 9094).
 
     Returns:
-        dict: A dictionary containing the IPFS hash (CID) or an error message.
+        tuple: (success: bool, result: Union[str, dict])
+               Where result is CID (str) on success or error message (dict)
     """
     url = f"http://{cluster_host}:{cluster_port}/add"
     
     try:
-        # Open the file in binary mode to upload the file itself
-        with open(file_path, 'rb') as file:
-            # Send POST request to IPFS Cluster
-            files = {'file': (file_path.split("/")[-1], file)}
-            response = requests.post(url, files=files)
+        # Create a file-like object from the encrypted bytes
+        files = {'file': (original_filename, encrypted_data)}
+        response = requests.post(url, files=files)
 
         # Check if the request was successful
         if response.status_code == 200:
-            # Return the CID from the response
-             print({"cid": response.json().get("cid")})
-             return True, response.json().get("cid")
+            print({"cid": response.json().get("cid")})
+            return True, response.json().get("cid")
         else:
             print({"error": f"Failed to add file. Status code: {response.status_code}, Response: {response.text}"})
             return False, response.text
 
     except Exception as e:
-        return {"error": str(e)}
+        return False, {"error": str(e)}
 
-def fetch_file_from_ipfs_cluster(cid):
+def fetch_encrypted_data_from_ipfs(cid: str, cluster_api_url: str = "http://localhost:8080") -> bytes:
     """
-    Fetches a file from IPFS Cluster using its CID and saves it locally.
-
-    Parameters:
-        cid (str): The Content Identifier (CID) of the file to fetch.
-        cluster_api_url (str): The base URL of the IPFS Cluster API (e.g., "http://localhost:9094").
-        output_path (str): The path where the fetched file will be saved.
-
+    Fetches encrypted data from IPFS directly as bytes (no file saved).
+    
+    Args:
+        cid: The Content Identifier (CID) of the encrypted data.
+        cluster_api_url: Base URL of the IPFS HTTP API (default: localhost:8080).
+    
     Returns:
-        bool: True if the file is fetched and saved successfully, False otherwise.
+        bytes: Raw encrypted data (nonce + ciphertext + tag) if successful.
+        None: If fetch fails.
+    
+    Example:
+        encrypted_data = fetch_encrypted_data_from_ipfs("QmXoypiz...")
+        if encrypted_data:
+            decrypted = decrypt_raw_data(encrypted_data, key)  # Your decryption function
     """
     try:
-        # Construct the API URL for fetching the file
-        url = f"http://localhost:8080/ipfs/{cid}"
-        output_path = f"dumps/{cid}.json"
-        
-        # Send a GET request to the IPFS Cluster API
+        url = f"{cluster_api_url}/ipfs/{cid}"
         response = requests.get(url, stream=True)
         
-        # Check if the request was successful
         if response.status_code == 200:
-            # Save the file to the specified output path
-            with open(output_path, "wb") as file:
-                for chunk in response.iter_content(chunk_size=8192):
-                    if chunk:  # Filter out keep-alive chunks
-                        file.write(chunk)
-            return True
+            # Collect all chunks into a bytes object
+            encrypted_data = b""
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    encrypted_data += chunk
+            return encrypted_data
         else:
-            print(f"Failed to fetch file: {response.status_code} - {response.text}")
-            return False
+            print(f"Fetch failed (HTTP {response.status_code}): {response.text}")
+            return None
 
     except requests.RequestException as e:
-        print(f"Error fetching file from IPFS Cluster: {e}")
-        return False
+        print(f"IPFS fetch error: {str(e)}")
+        return None

@@ -428,3 +428,111 @@ def add_user_profile(wallet_id, name, email, height, weight, age, gender, bmi):
         if connection:
             cursor.close()
             connection_pool.putconn(connection)
+
+
+def add_encryption_key(wallet_id: str, encrypted_key: bytes) -> bool:
+    """
+    Add an encrypted key in the data_owner_key table.
+    
+    Args:
+        wallet_id: The wallet ID (string)
+        encrypted_key: The encryption key (encrypted with owner's public key) as bytes
+    
+    Returns:
+        bool: True if successful, False if failed
+    """
+    connection = None
+    try:
+        # Prepare the insert/update query
+        query = """
+        INSERT INTO data_owner_key (wallet_id, encrypted_key)
+        VALUES (%s, %s)
+        ON CONFLICT (wallet_id) DO UPDATE
+        SET encrypted_key = EXCLUDED.encrypted_key;
+        """
+
+        # Execute the query
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        cursor.execute(query, (wallet_id, encrypted_key))
+        connection.commit()
+        
+        return True
+    except Exception as e:
+        print(f"Error adding/updating encryption key: {e}")
+        return False
+    finally:
+        if connection:
+            cursor.close()
+            connection_pool.putconn(connection)
+
+
+def get_encryption_key(wallet_id: str) -> bytes:
+    """
+    Retrieve the encrypted key for a given wallet ID.
+    
+    Args:
+        wallet_id: The wallet ID to look up
+    
+    Returns:
+        bytes: The encrypted key if found, None if not found or error
+    """
+    connection = None
+    try:
+        # Prepare the select query
+        query = """
+        SELECT encrypted_key FROM data_owner_key
+        WHERE wallet_id = %s;
+        """
+
+        # Execute the query
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        cursor.execute(query, (wallet_id,))
+        result = cursor.fetchone()
+        
+        return result[0] if result else None
+    except Exception as e:
+        print(f"Error retrieving encryption key: {e}")
+        return None
+    finally:
+        if connection:
+            cursor.close()
+            connection_pool.putconn(connection)
+
+
+def get_wallet_id_by_device(device_id: str) -> str:
+    """
+    Fetch the wallet_id associated with a given device_id from the device_list table.
+    
+    Args:
+        device_id: The device ID to look up
+    
+    Returns:
+        str: The wallet_id if found, None if not found or error
+    """
+    connection = None
+    try:
+        # Prepare the select query
+        select_query = """
+        SELECT hash_of_wallet_id
+        FROM device_list
+        WHERE device_id = %s;
+        """
+
+        # Execute the query
+        connection = connection_pool.getconn()
+        cursor = connection.cursor()
+        cursor.execute(select_query, (device_id,))
+        
+        # Fetch the result
+        result = cursor.fetchone()
+        
+        return result[0] if result else None
+    except Exception as e:
+        print(f"Error fetching wallet_id for device {device_id}: {e}")
+        return None
+    finally:
+        if connection:
+            cursor.close()
+            connection_pool.putconn(connection)

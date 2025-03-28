@@ -7,64 +7,64 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from ipfs_content import ipfs_operations as ipfs
 from database import db_operations as db
+from encryption import encrypt
 
-def generate_random_filename():
-    """Generates a random 46-character filename for the JSON file."""
-    return ''.join(random.choices(string.ascii_letters + string.digits, k=46)) + ".json"
 
-def save_payload_to_file(payload):
-    """Saves the payload to a JSON file in the dumps folder."""
-    try: 
-        os.makedirs("dumps", exist_ok=True)
-        filename = os.path.join("dumps", generate_random_filename())
-        with open(filename, "w") as file:
-            json.dump(payload, file, indent=4)
-        print(f" [x] Payload saved to {filename}")
-        return filename
-    except Exception as e:
-        print(f"Failed {e}")
-        return False
-
-def silentremove(filename):
+def symmetric_key(wallet_id):
     try:
-        os.remove(filename)
-    except OSError as e:
-        print(f"Failed to delete file {filename} {e}")
+        key = db.get_encryption_key(wallet_id)
+        if key is None:
+            key, _ = encrypt.generate_symmetric_key()
+            db.add_encryption_key(wallet_id,key)
+        return key
+    except Exception as e:
+        print(e)
+        return None
 
 def process_message(ch, method, properties, body):
-    print("Received message:", body)
-    message = json.loads(body)
-    
-    topic = message.get("topic", "Unknown")
-    payload = message.get("payload", {})
+    try: 
+        print("Received message:", body)
+        message = json.loads(body)
+        
+        topic = message.get("topic", "Unknown")
+        payload = message.get("payload", {})
 
-    print(f" [x] Topic: {topic}")
-    print(f" [x] Payload: {payload}")
+        print(f" [x] Topic: {topic}")
+        print(f" [x] Payload: {payload}")
 
-    filename = save_payload_to_file(payload)
-    if filename == False:
-        print("Failed to add payload to json file")
+        wallet_id = db.get_wallet_id_by_device(topic)
+
+        if wallet_id is None:
+            print(f"{topic} not registered under any user")
+            ch.basic_ack(delivery_tag=method.delivery_tag)
+            return 
+        
+        key = symmetric_key(wallet_id)
+        if key is None:
+            ch.basic_ack(delivery_tag=method.delivery_tag)
+            return 
+        
+        encrypted_data = encrypt.encrypt_json_string(payload,key)
+
+        ipfs_output,cid = ipfs.add_file_with_metadata(encrypted_data)
+        
+        if ipfs_output != True:
+            print(f"Failed to add file to IPFS, {cid}")
+            ch.basic_ack(delivery_tag=method.delivery_tag)  
+            return 
+        
+        db_output = db.add_hash(cid,topic)
+        if db_output == False:
+            print(f"Adding CID to database failed, {topic},{payload},{cid}")
+            ch.basic_ack(delivery_tag=method.delivery_tag)
+            return
+        
         ch.basic_ack(delivery_tag=method.delivery_tag)
         return
-    
-    ipfs_output = ipfs.add_file_with_metadata(filename)
-    
-    silentremove(filename)
-
-    if ipfs_output[0] != True:
-        print("IPFS output not True")
-        ch.basic_ack(delivery_tag=method.delivery_tag)  
-        return 
-    cid = ipfs_output[1]
-    db_output = db.add_hash(cid,topic)
-    if db_output == False:
-        print(f"Adding CID to database failed, {topic},{payload},{cid}")
+    except Exception as e:
+        print(e)
         ch.basic_ack(delivery_tag=method.delivery_tag)
         return
-    
-    ch.basic_ack(delivery_tag=method.delivery_tag)
-    return
-    
 
 def start_consumer():
     connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))

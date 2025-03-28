@@ -7,6 +7,7 @@ import os
 from flask_cors import CORS
 import hashlib
 from access_control.access_control import AccessControl
+from encryption import encrypt
 
 
 try:
@@ -63,7 +64,6 @@ def medical_data():
 
 @app.route('/get-medical', methods=['POST'])
 def get_medical_data():
-    try:
         # Get the JSON data from the request
         data = request.json  # This is unconventional for GET, but will work if body is sent
         
@@ -78,29 +78,24 @@ def get_medical_data():
         else:
             return jsonify({"status": "error", "message": "Request must contain 'time', 'topic', 'date' and 'wallet_id'"}), 400
 
+        wallet_id = db.get_wallet_id_by_device(topic)
+        if wallet_id is None:
+            return jsonify({"status": "error", "message": "topic is not registered under any user'"}), 400
+        
+        key = db.get_encryption_key(wallet_id)
+        if key is None:
+            return jsonify({"status": "error", "message": "Decryption key not found'"}), 400
+        
         # Fetch CIDs for the given time period
         hash_list,message = db.fetch_cids_by_time(date,time,topic)
+
+        merged_data = []
         if hash_list:
             # Fetch files from IPFS and store them in dumps/{cid}.json
             for cid in hash_list:
-                ipfs.fetch_file_from_ipfs_cluster(cid)
-            
-            # Read all JSON files from the dumps directory and merge their contents
-            merged_data = []
-            for cid in hash_list:
-                file_path = f"dumps/{cid}.json"
-                if os.path.exists(file_path):
-                    try:
-                        # Read the file and add its contents to the list
-                        with open(file_path, 'r') as file:
-                            file_data = json.load(file)
-                            merged_data.append(file_data)
-                        
-                        # Remove the file after processing
-                        os.remove(file_path)
-                    except Exception as e:
-                        print(f"Error processing or removing file {file_path}: {e}")
-                        continue
+                encrypted_data = ipfs.fetch_encrypted_data_from_ipfs(cid)
+                decrypted_data = encrypt.decrypt_to_json_string(encrypted_data,key)
+                merged_data.append(json.loads(decrypted_data))
 
             # Return the merged data as a JSON response
             return jsonify({"data": merged_data}), 200
@@ -108,9 +103,9 @@ def get_medical_data():
             # Return a response if no CIDs are found
             return jsonify({"status": "success", "message": f"{message}"}), 200
 
-    except Exception as e:
-        print(f"Error in get_medical_data: {e}")
-        return jsonify({"status": "error", "message": str(e)}), 500
+    # except Exception as e:
+    #     print(f"Error in get_medical_data: {e}")
+    #     return jsonify({"status": "error", "message": str(e)}), 500
 
 
 
